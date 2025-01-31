@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    background-color: #fffffe;
+    top: 0px;
+    height: 120px;
+    z-index: 2;
+    border-bottom: 1px #C7C7C7 solid;
+    box-shadow: 6px 6px 25px rgba(199,199,199, 0.5);
+}
+    
+header img {
+    height: 110px;
+}
+
+@media screen and (min-width: 992px) {
+    
+}
+    
+/* header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+    
+header h2 {
+    font-size: 2em;
+    margin: 0px;
+}
+
+header h1 {
+    color: var(--main-color);
+    margin: 15px 0px 0px 0px;
+} */
