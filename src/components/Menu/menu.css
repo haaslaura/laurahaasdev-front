@@ -1,0 +1,116 @@
+.header__menu {
+  position: relative;
+}
+
+/* Position and sizing of burger button */
+.header__menu-btn {
+  position: fixed;
+  right: 36px;
+  top: 36px;
+  cursor: pointer;
+}
+
+/* Color of burger icon bars */
+.menu-btn__burger-icon span {
+  display: block;
+  background: #abaeb9;
+  height: 8px;
+  width: 50px;
+  margin-bottom: 9px;
+  transition-duration: 400ms;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.header__menu-btn:hover > .menu-btn__burger-icon span,
+.header__menu-btn:focus > .menu-btn__burger-icon span {
+  background: var(--main-color);
+}
+
+/* change visibility */
+.visible-menu {
+  visibility: visible;
+}
+
+.invisible-menu {
+  visibility: hidden;
+}
+
+/* Styling of overlay */
+.header__menu-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  min-height: 100vh;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+.header__menu-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 60px;
+  justify-content: flex-start;
+  
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  min-height: 100vh;
+  width: 200px;
+  
+  background: #373a47;
+  padding: 3em 2em 0 2em;
+  margin: 0;
+  list-style: none;
+  box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.4);
+}
+
+.header__menu-item {
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.header__menu-item:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+/* Close button */
+.header__menu-btn-close {
+  position: absolute;
+  z-index: 99;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  opacity: 0.5;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: #00000000;
+}
+
+.header__menu-btn-close:hover {
+  opacity: 1;
+}
+
+.header__menu-btn-close:before,
+.header__menu-btn-close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 24px;
+  width: 3px;
+  background-color: #fff;
+}
+
+.header__menu-btn-close:before {
+  transform: rotate(45deg);
+}
+
+.header__menu-btn-close:after {
+  transform: rotate(-45deg);
+}

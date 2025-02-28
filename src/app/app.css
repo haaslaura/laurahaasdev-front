@@ -6,20 +6,20 @@
   /* Colors */
   --main-color: #4fc4cf; /* Light blue */
   --second-color: #994ff3; /* Purple */
---bg-color: #f6efef; /* Salmon */
-  --main-text-color: #181818;
+  --bg-color: #f6efef; /* Salmon */
+  --main-text-color: #373a47;
 
   /* Text configuration */
---text-font: 'Montserrat', sans-serif;
+  --text-font: 'Montserrat', sans-serif;
   --title-font: 'Montserrat', sans-serif;
 
---text-size: 1rem;
+  --text-size: 1rem;
 
   --text-weight: 400;
---title-weight: 600;
+  --title-weight: 600;
 
   --text-height: 1.6rem;
---title-height: 1.6rem;
+  --title-height: 1.6rem;
 }
 
 body {
@@ -27,7 +27,7 @@ margin:0;
 background-color: #fffffe;
 }
 
-p, ul, ol {
+p, ul, ol, a {
 font-family: var(--text-font);
 font-size: var(--text-size);
 font-weight: var(--text-weight);

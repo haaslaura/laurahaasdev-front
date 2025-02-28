@@ -1,21 +1,17 @@
-import { Link } from 'react-router'
-import logo from '../../assets/logo-site-laura-haas.svg'
-
-import './header.css'
-import './menu.css'
-
 import { useEffect, useState } from 'react'
-import { slide as Menu } from 'react-burger-menu'
+import { Link } from 'react-router'
 
-// https://www.npmjs.com/package/react-burger-menu
+import Menu from '../../components/Menu/Menu'
+
+import logo from '../../assets/logo-site-laura-haas.svg'
+import './header.css'
+
 
 const Header = () => {
 
     const [opening, setOpening] = useState(false)
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
     
-
-
     useEffect(() => {
         const handleResize = () => {
           setIsMobile(window.innerWidth <= 768)
@@ -29,7 +25,6 @@ const Header = () => {
 
     return (
         <header>
-
             <Link to="/">
                 <img
                     src={logo}
@@ -37,7 +32,6 @@ const Header = () => {
                     title="Laura Haas, développeuse"
                 />
             </Link>
-
             {
                 !isMobile &&
                     <div>
@@ -45,16 +39,7 @@ const Header = () => {
                         <p>Développeuse JavaScript React</p>
                     </div>
             }
-            
-            <Menu
-                right
-
-            >
-                <a id="home" className="menu-item" href="/">Home</a>
-                <a id="about" className="menu-item" href="/about">About</a>
-                <a id="contact" className="menu-item" href="/contact">Contact</a>
-            </Menu>
-
+            <Menu></Menu>
         </header>
     )
 }
