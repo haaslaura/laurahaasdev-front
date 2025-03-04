@@ -7,6 +7,8 @@
   position: fixed;
   right: 36px;
   top: 36px;
+  background-color: #ffffff00;
+  border: none;
   cursor: pointer;
 }
 
@@ -35,6 +37,11 @@
   visibility: hidden;
 }
 
+@keyframes menu-slow-transition {
+  from {transform: translateX(0)}
+  to {transform: translateX(1)}
+}
+
 /* Styling of overlay */
 .header__menu-overlay {
   position: fixed;
@@ -45,8 +52,9 @@
   width: 100%;
   overflow: auto;
   background: rgba(0, 0, 0, 0.3);
-}
 
+  animation: menu-slow-transition 10000ms;
+}
 
 .header__menu-content {
   display: flex;

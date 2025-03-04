@@ -5,8 +5,6 @@ import { useState } from "react";
 const Menu = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
-    const [classMenuVisible, setClassMenuVisible] = useState("invisible-menu");
-    const [ariaExpanded, setAriaExpanded] = useState(false);
 
     /**
      * Reste à faire :
@@ -18,26 +16,22 @@ const Menu = () => {
         console.log("pouet");
         if (menuOpen === false) {
             setMenuOpen(true);
-            setClassMenuVisible("visible-menu");
-            setAriaExpanded(true);
         } else {
             setMenuOpen(false);
-            setClassMenuVisible("invisible-menu");
-            setAriaExpanded(false);
         }
     }
 
     return (
         <div className="header__menu" tabIndex="-1">
             <nav>
-                <a
+                <button
                     className="header__menu-btn"
                     id="burger__menubutton"
                     role="button"
 
                     aria-haspopup="true"
                     aria-controls="main-menu"
-                    aria-expanded={ariaExpanded}
+                    aria-expanded={menuOpen ? "true" : "false"}
                     tabIndex="0"
 
                     onClick={toogleMenu}
@@ -47,10 +41,10 @@ const Menu = () => {
                         <span></span>
                         <span></span>
                     </span>
-                </a>
+                </button>
 
                 <div
-                    className={`header__menu-overlay ${classMenuVisible}`}
+                    className={`header__menu-overlay animation-class ${menuOpen ? "visible-menu" : "invisible-menu"}`}
                     id="main-menu"
                     aria-labelledby="burger__menubutton"
                 >
@@ -70,17 +64,17 @@ const Menu = () => {
                             </a>
                         </li>
                         <li role="none">
-                            <a role="menuitem" id="skills" className="header__menu-item" href="/">
+                            <a role="menuitem" id="skills" className="header__menu-item" href="/competences">
                                 <i className="fa-solid fa-gear"></i> Compétences
                             </a>
                         </li>
                         <li role="none">
-                            <a role="menuitem" id="educational-bg" className="header__menu-item" href="/">
+                            <a role="menuitem" id="educational-bg" className="header__menu-item" href="/formations">
                                 <i className="fa-solid fa-graduation-cap"></i> Formations
                             </a>
                         </li>
                         <li role="none">
-                            <a role="menuitem" id="contact" className="header__menu-item" href="/">
+                            <a role="menuitem" id="contact" className="header__menu-item" href="/contact">
                                 <i className="fa-solid fa-comment"></i> Contact
                             </a>
                         </li>
