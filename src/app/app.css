@@ -44,6 +44,15 @@ a {
 color: var(--main-color);
 }
 
+/* Désactive le focus visible par défaut */
+/* button:focus {
+  outline: none; 
+} */
+/* Affiche le focus uniquement pour le clavier */
+/* button:focus-visible {
+  outline: 2px solid black; 
+} */
+
 
 /********************/
 /***** A PROPOS *****/

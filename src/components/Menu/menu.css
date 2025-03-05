@@ -31,15 +31,15 @@
 /* change visibility */
 .visible-menu {
   visibility: visible;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 0.2s ease-in-out;
 }
 
 .invisible-menu {
   visibility: hidden;
-}
+  background-color: rgba(0, 0, 0, 0);
 
-@keyframes menu-slow-transition {
-  from {transform: translateX(0)}
-  to {transform: translateX(1)}
+  transition: background-color 0.2s ease-in-out, visibility 0s 0.3s;
 }
 
 /* Styling of overlay */
@@ -51,9 +51,6 @@
   min-height: 100vh;
   width: 100%;
   overflow: auto;
-  background: rgba(0, 0, 0, 0.3);
-
-  animation: menu-slow-transition 10000ms;
 }
 
 .header__menu-content {
@@ -75,8 +72,22 @@
   margin: 0;
   list-style: none;
   box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.4);
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 }
 
+/* Animated menu appearances and disappearances */
+.visible-menu .header__menu-content {
+  transform: translateX(0);
+}
+
+.invisible-menu .header__menu-content {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Menu items */
 .header__menu-item {
   color: var(--bg-color);
   text-decoration: none;
@@ -93,7 +104,13 @@
   z-index: 99;
   right: 15px;
   top: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 32px;
+  height: 32px;
   opacity: 0.5;
   cursor: pointer;
   border: none;
@@ -103,6 +120,7 @@
 
 .header__menu-btn-close:hover {
   opacity: 1;
+  transition: opacity 0.6s ease;
 }
 
 .header__menu-btn-close:before,
