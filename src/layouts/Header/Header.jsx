@@ -9,7 +9,6 @@ import './header.css'
 
 const Header = () => {
 
-    const [opening, setOpening] = useState(false)
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
     
     useEffect(() => {

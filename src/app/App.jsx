@@ -10,7 +10,6 @@ import Skills from '../pages/Skills/Skills'
 import EducationalBackground from '../pages/EducationalBg/EducationalBg'
 import Contact from '../pages/Contact/Contact'
 import Portfolio from '../pages/Portolio/Portfolio'
-import { useEffect } from 'react'
 
 
 function App() {

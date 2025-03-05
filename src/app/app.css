@@ -7,7 +7,7 @@
   --main-color: #4fc4cf; /* Light blue */
   --second-color: #994ff3; /* Purple */
   --bg-color: #f6efef; /* Salmon */
-  --main-text-color: #373a47;
+  --main-text-color: #1a1b22;
 
   /* Text configuration */
   --text-font: 'Montserrat', sans-serif;
@@ -19,78 +19,43 @@
   --title-weight: 600;
 
   --text-height: 1.6rem;
-  --title-height: 1.6rem;
+  --title-height: 2.6rem;
 }
 
 body {
-margin:0;
-background-color: #fffffe;
+  margin:0;
+  background-color: #fffffe;
 }
 
 p, ul, ol, a {
-font-family: var(--text-font);
-font-size: var(--text-size);
-font-weight: var(--text-weight);
-line-height: var(--text-height);
+  font-family: var(--text-font);
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+  line-height: var(--text-height);
+  color: var(--main-text-color);
 }
 
 h1, h2, h3 {
-font-family: var(--title-font);
-font-weight: var(--title-weight);
-line-height: var(--title-height);
+  font-family: var(--title-font);
+  font-weight: var(--title-weight);
+  line-height: var(--title-height);
+  margin: 0;
 }
 
 a {
-color: var(--main-color);
+  color: var(--main-color);
+}
+
+p {
+  margin: 0.8em 0;
 }
 
 /* @media screen and (min-width: 992px) {
 
 } */
 
-
-/********************/
-/***** A PROPOS *****/
-/********************/
-
-.section-apropos {
-display: grid;
-grid-template-columns: 2fr 1fr;
-background: linear-gradient(90deg, #4fc4cf, #994ff3);
-padding: 6em 10% 6em 10%;
-}
-
-.a-propos-block1 {
-grid-column: 1 / 3;
-text-align: center;
-margin-bottom: 2em;
-}
-
-.a-propos-block1, h2 h3 {
-color: #fffffe;
-}
-
-.a-propos-block2 {
-grid-column: 1 / 2;
-color: #fffffe;
-}
-
-.a-propos-block2 a {
-color: #fffffe;
-}
-
-.a-propos-block2 p {
-margin-bottom: 30px;
-margin-right: 16%;
-}
-
-.a-propos-block3 {
-grid-column: 2 / 3;
-}
-
-.portrait {
-max-width: 100%;
-height: auto;
+section {
+  padding: 1.2em 1em 4em 1em;
 }
 
 /********************/
