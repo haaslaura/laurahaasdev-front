@@ -34,9 +34,9 @@ const Header = () => {
             </Link>
             {
                 !isMobile &&
-                    <div>
+                    <div id="header__title">
                         <p>Laura Haas</p>
-                        <p>Développeuse JavaScript React</p>
+                        <p>Développeuse Front-end</p>
                     </div>
             }
             <Menu></Menu>

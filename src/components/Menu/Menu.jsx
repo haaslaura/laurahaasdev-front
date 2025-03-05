@@ -2,13 +2,33 @@ import "./menu.css";
 import { useEffect, useRef, useState } from "react";
 
 
+/**
+ * Menu component - Displays a drop-down menu that can be accessed and navigated using the keyboard.
+ *
+ * Features :
+ * - Open/close the menu using a button.
+ * - Closing the menu by clicking outside or pressing "Escape".
+ * - Traps the focus in the menu when it is open.
+ * - Restore focus on the menu button when closing.
+ *
+ * @component
+ * @returns {JSX.Element} The Menu component.
+ */
 const Menu = () => {
     
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef(null);
     const burgerButtonRef = useRef(null);
+    const prevMenuOpenRef = useRef(null);
+
+    const focusableElements = menuRef.current?.querySelectorAll(
+        "a, button, input, select, textarea, [tabindex]:not([tabindex='-1'])"
+    );
         
-    const toogleMenu = () => {
+    /**
+     * Toggles the menu open state
+     */
+    const toggleMenu = () => {
         if (menuOpen === false) {
             setMenuOpen(true);
         } else {
@@ -16,65 +36,32 @@ const Menu = () => {
         }
     }
     
-    // Function to close the menu when clicking outside the menu
+    /**
+     * Closes the menu when clicked outside
+     * @param {MouseEvent} e - Click event
+     */
     const handleOutsideClick = (e) => {
         if (e.target.classList.contains("header__menu-overlay")) {
             setMenuOpen(false);
         }
     }
     
-    // Function to close the menu when press Escape
+    /**
+     * Closes the menu when the user presses the "Escape" key
+     * @param {KeyboardEvent} e - Keyboard event
+     */
     const handleKeyDown = (e) => {
         if (e.key === "Escape") {
             setMenuOpen(false);
         }
     }
-    
-    useEffect(() => {
-        if (menuOpen) {
 
-            // EVENEMENTS
-            document.addEventListener("click", handleOutsideClick);
-            document.addEventListener("keydown", handleKeyDown);
-
-            // FOCUS 
-            const focusableElements = menuRef.current.querySelectorAll(
-                "a, button, input, select, textarea, [tabindex]:not([tabindex='-1'])"
-            );
-    
-            if (focusableElements.length > 0) {
-                focusableElements[0].focus();
-            }
-    
-            document.addEventListener("keydown", trapFocus); // Piège le focus
-
-        } else {
-
-            // EVENEMENTS
-            document.removeEventListener("click", handleOutsideClick);
-            document.removeEventListener("keydown", handleKeyDown);
-
-            // FOCUS
-            // Rendre le focus au bouton menu
-            // if (burgerButtonRef.current) {
-            //     burgerButtonRef.current.focus();
-            // }
-        }
-        
-        return () => {
-            // EVENEMENTS
-            document.removeEventListener("click", handleOutsideClick);
-            document.removeEventListener("keydown", handleKeyDown);
-            // FOCUS
-            document.removeEventListener("keydown", trapFocus);
-        };
-    }, [menuOpen]);
-
-    // Fonction pour empêcher la sortie du focus du menu
+    /**
+     * Prevents the menu focus from exiting when the menu is open
+     * @param {KeyboardEvent} e - Keyboard event
+     */
     const trapFocus = (e) => {
-        const focusableElements = menuRef.current.querySelectorAll(
-            "a, button, input, select, textarea, [tabindex]:not([tabindex='-1'])"
-        );
+        if (!focusableElements || focusableElements.length === 0) return;
 
         const firstElement = focusableElements[0];
         const lastElement = focusableElements[focusableElements.length - 1];
@@ -89,8 +76,34 @@ const Menu = () => {
             }
         }
     }
-
     
+    /**
+     * Adds or deletes event listeners depending on the state of the menu.
+     */
+    useEffect(() => {
+        if (menuOpen) {
+
+            document.addEventListener("click", handleOutsideClick);
+            document.addEventListener("keydown", handleKeyDown);
+            document.addEventListener("keydown", trapFocus);
+
+            focusableElements?.[0]?.focus();
+
+        } else {
+            if (prevMenuOpenRef.current) {
+                burgerButtonRef.current?.focus();
+            }
+        }
+        prevMenuOpenRef.current = menuOpen;
+        
+        return () => {
+            document.removeEventListener("click", handleOutsideClick);
+            document.removeEventListener("keydown", handleKeyDown);
+            document.removeEventListener("keydown", trapFocus);
+        };
+    }, [menuOpen]);
+
+
     return (
         <div className="header__menu">
             <nav>
@@ -101,7 +114,7 @@ const Menu = () => {
                     aria-haspopup="true"
                     aria-controls="main-menu"
                     aria-expanded={menuOpen ? "true" : "false"}
-                    onClick={toogleMenu}
+                    onClick={toggleMenu}
                 >
                     <span className="menu-btn__burger-icon">
                         <span></span>
@@ -116,16 +129,9 @@ const Menu = () => {
                     id="main-menu"
                     aria-labelledby="burger__menubutton" 
                 >
-                    <button
-                        aria-label="Fermer le menu"
-                        className="header__menu-btn-close"
-                        onClick={toogleMenu}
-                    >
-                    </button>
-                    <menu
-                        className="header__menu-content"
-                        role="menu"
-                    >
+                    {/* MENU CONTENT */}
+                    <button className="header__menu-btn-close" onClick={toggleMenu} aria-label="Fermer le menu"></button>
+                    <menu className="header__menu-content" role="menu">
                         <li role="none">
                             <a role="menuitem" id="home" className="header__menu-item" href="/">
                                 <i className="fa-solid fa-house"></i> Home
