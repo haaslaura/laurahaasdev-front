@@ -18,7 +18,7 @@
   --text-weight: 400;
   --title-weight: 600;
 
-  --text-height: 1.6rem;
+  --text-height: 1.5rem;
   --title-height: 2.6rem;
 }
 
@@ -27,11 +27,17 @@ body {
   background-color: #fffffe;
 }
 
-p, ul, ol, a {
+p, ul, ol, a, span, button {
   font-family: var(--text-font);
   font-size: var(--text-size);
   font-weight: var(--text-weight);
+}
+
+p, ul, ol, a, span {
   line-height: var(--text-height);
+}
+
+p, ul, ol, span {
   color: var(--main-text-color);
 }
 

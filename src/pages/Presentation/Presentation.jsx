@@ -43,14 +43,16 @@ const Presentation = () => {
                     Mon objectif aujourd'hui : progresser continuellement pour vous aider à anticiper les enjeux technologiques de demain !
                 </p>
                 <div id="presentation__btn">
-                    {/* <Button as={Link} to="/contact">Prenons contact</Button>
-                    <Button as={Link} to="/competences">Mes compétences</Button> */}
                     <Button
                         as={Link}
                         to="/contact"
                         text="Prenons contact"
                     />
-                    
+                    <Button
+                        as={Link}
+                        to="/competences"
+                        text="Mes compétences"
+                    />
                 </div>
             </div>
         </section>
