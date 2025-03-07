@@ -1,0 +1,38 @@
+[
+    {
+        "id": "01",
+        "name": "React.js",
+        "icon": "fa-brands fa-react",
+        "type": "hard skill"
+    },
+    {
+        "id": "02",
+        "name": "JavaScript",
+        "icon": "fa-brands fa-js",
+        "type": "hard skill"
+    },
+    {
+        "id": "03",
+        "name": "React Router",
+        "icon": ".",
+        "type": "hard skill"
+    },
+    {
+        "id": "04",
+        "name": "Redux",
+        "icon": ".",
+        "type": "hard skill"
+    },
+    {
+        "id": "05",
+        "name": "GitHub",
+        "icon": "fa-brands fa-github",
+        "type": "hard skill"
+    },
+    {
+        "id": "06",
+        "name": "Jest",
+        "icon": ".",
+        "type": "hard skill"
+    }
+]
