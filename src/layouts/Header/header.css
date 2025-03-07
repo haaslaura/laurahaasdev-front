@@ -8,7 +8,7 @@ header {
     position: sticky;
     background-color: #fffffe;
     top: 0px;
-    height: auto;
+    height: var(--header-height);
     z-index: 2;
     border-bottom: 1px #C7C7C7 solid;
     box-shadow: 6px 6px 25px rgba(199,199,199, 0.5);
@@ -19,4 +19,6 @@ header {
     margin: 0.9rem 0 0 0;
 }
     
-header img {height: 6.3rem;}
+header img {
+    height: 100px;
+}
