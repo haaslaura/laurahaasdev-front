@@ -20,7 +20,15 @@
 
   --text-height: 1.5rem;
   --title-height: 2.6rem;
+
+  /* Others */
+  --header-height: 110px
 }
+
+
+/********************/
+/******* FONT *******/
+/********************/
 
 body {
   margin:0;
@@ -33,8 +41,12 @@ p, ul, ol, a, span, button {
   font-weight: var(--text-weight);
 }
 
-p, ul, ol, a, span {
+p, a, span {
   line-height: var(--text-height);
+}
+
+ul, ol {
+  line-height: 2em;
 }
 
 p, ul, ol, span {
@@ -56,13 +68,31 @@ p {
   margin: 0.8em 0;
 }
 
+span {
+  font-weight: var(--title-weight);
+  color: var(--main-color);
+}
+
+
+/********************/
+/****** SECTION *****/
+/********************/
+/*
+Sections are present in:
+- "Presentation",
+- "Skills",
+- "Portfolio",
+- "EducationnelBg" and "Contact"
+*/
+section {
+  padding: 1.2em 1em 4em 1em;
+  min-height: calc(100vh - var(--header-height));
+}
+
 /* @media screen and (min-width: 992px) {
 
 } */
 
-section {
-  padding: 1.2em 1em 4em 1em;
-}
 
 /********************/
 /**** COMPETENCES ***/
