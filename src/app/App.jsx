@@ -10,6 +10,8 @@ import Skills from '../pages/Skills/Skills'
 import EducationalBackground from '../pages/EducationalBg/EducationalBg'
 import Contact from '../pages/Contact/Contact'
 import Portfolio from '../pages/Portolio/Portfolio'
+import Error from '../pages/Error/Error'
+import Main from '../layouts/Main/Main'
 
 
 function App() {
@@ -19,11 +21,16 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/' element={<Presentation />} />
-        <Route path='/competences' element={<Skills />} />
-        <Route path='/formations' element={<EducationalBackground />} />
-        <Route path='/realisations' element={<Portfolio />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/' element={<Main />}>
+
+          <Route index element={<Presentation />} />
+          <Route path='/competences' element={<Skills />} />
+          <Route path='/formations' element={<EducationalBackground />} />
+          <Route path='/realisations' element={<Portfolio />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='*' element={<Error />} />
+        
+        </Route>
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -26,7 +26,7 @@ To run the project locally:
 ## 🔨 Features in Progress
 🟩 Responsive navigation menu
 
-🔲 Home page with introduction & photo
+🟩 Home page with introduction & photo
 
 🔲 Portfolio section with project previews
 

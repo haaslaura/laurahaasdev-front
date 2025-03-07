@@ -2,10 +2,16 @@
     background-image: url(../../assets/bandeau-formations-laura-haas.svg);
     background-attachment: fixed;
     background-size: cover;
+
+    flex-direction: column;
 }
 
 #educbg-section h1, #educbg-section h2, #educbg-section ul {
     color: var(--main-text-color);
+}
+
+#educbg-section h1 {
+    margin-top: 20px;
 }
 
 #educbg-section__txt-bg {
@@ -13,6 +19,7 @@
     border-radius: 5px;
     padding: 1.2em;
     text-wrap: balance;
+    margin-bottom: 40px;
 }
 
 #educbg-section #col1 ul {

@@ -1,6 +1,5 @@
 #presentation {
     background: linear-gradient(90deg, #4fc4cf, #994ff3);
-    display: flex;
     flex-direction: column;
 }
 
@@ -10,11 +9,16 @@
 }
 
 #presentation__title {
+    margin-top: 20px;
     flex-direction: column-reverse;
 }
 
 #presentation__content, #presentation__text {
     flex-direction: column;
+}
+
+#presentation__content {
+    margin-bottom: 40px;
 }
 
 #presentation__btn {
