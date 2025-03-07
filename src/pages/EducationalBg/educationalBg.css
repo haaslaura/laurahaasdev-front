@@ -1,0 +1,44 @@
+#educbg-section {
+    background-image: url(../../assets/bandeau-formations-laura-haas.svg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#educbg-section h1, #educbg-section h2, #educbg-section ul {
+    color: var(--main-text-color);
+}
+
+#educbg-section__txt-bg {
+    background-color: #ffffffd3;
+    border-radius: 5px;
+    padding: 1.2em;
+    text-wrap: balance;
+}
+
+#educbg-section #col1 ul {
+    list-style-type: "\1F393";
+}
+
+#educbg-section #col2 ul {
+    list-style-type: "\1F680";
+    /* café : 2615*/
+}
+
+@media screen and (min-width: 576px) {
+    #educbg-section__txt-bg {
+        padding: 1.6em 10%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .educbg__col {
+        width: 50%;
+    }
+
+    #educbg-section__txt-bg {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 1.3em 5%;
+    }
+}
