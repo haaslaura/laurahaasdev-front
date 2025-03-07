@@ -1,0 +1,21 @@
+#error-section {
+    background: linear-gradient(90deg, #4fc4cf, #994ff3);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;  
+}
+
+#error-section h1 {
+    font-size: 5em;
+    line-height: 1em;
+    margin: 0;
+}
+#error-section p {
+    font-size: 1.2em;
+    margin: 2em 0px;
+}
+
+#error-section h1, #error-section p {
+    color: #fff;
+}
