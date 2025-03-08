@@ -35,7 +35,7 @@ body {
   background-color: #fffffe;
 }
 
-p, ul, ol, a, span, button {
+p, ul, ol, a, span, button, input, textarea {
   font-family: var(--text-font);
   font-size: var(--text-size);
   font-weight: var(--text-weight);

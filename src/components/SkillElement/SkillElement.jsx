@@ -1,10 +1,13 @@
 import "./skillElement.css"
+import { skillFactory } from "../../factories/skillFactory"
 
-const SkillElement = ({ icon, text }) => {
+const SkillElement = ({ icon, type, text }) => {
+
+    const media = skillFactory(type, icon)
 
     return (
         <div className="skill-box">
-            <i className={icon} aria-hidden="true"></i>
+            { media.render() }
             <p>{text}</p>
         </div>
     )

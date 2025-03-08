@@ -42,51 +42,63 @@ const ContactForm = () => {
     return (
         <form className="contact-form" onSubmit={handleSubmit} noValidate>
             <div>
-                <div>
+                <div role="group" aria-labelledby="Nom">
                     <label htmlFor="name">Nom</label>
                     <input
                         type="text"
                         name="name"
+                        placeholder="Nom"
                         value={formData.name}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         aria-describedby="name-error"
+                        required
+                        aria-required="true"
                     />
                     {errors.name && <span className="error" id="name-error">{errors.name}</span>}
                 </div>
-                <div>
-                    <label htmlFor="">Email</label>
+                <div role="group" aria-labelledby="Email">
+                    <label htmlFor="email">Email</label>
                     <input
                         type="email"
                         name="email"
+                        placeholder="Email"
                         value={formData.email}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         aria-describedby="email-error"
+                        required
+                        aria-required="true"
                     />
                     {errors.email && <span className="error" id="email-error">{errors.email}</span>}
                 </div>
             </div>
-            <div>
-                <label>Téléphone</label>
+            <div role="group" aria-labelledby="Téléphone">
+                <label htmlFor="phone">Téléphone</label>
                 <input
                     type="tel"
                     name="phone"
+                    placeholder="Téléphone"
                     value={formData.phone}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     aria-describedby="phone-error"
+                    required
+                    aria-required="true"
                 />
                 {errors.phone && <span className="error" id="phone-error">{errors.phone}</span>}
             </div>
-            <div>
-                <label>Message</label>
+            <div role="group" aria-labelledby="Message">
+                <label htmlFor="message">Message</label>
                 <textarea
                     name="message"
+                    placeholder="Votre message"
                     value={formData.message}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     aria-describedby="message-error"
+                    required
+                    aria-required="true"
                 ></textarea>
                 {errors.message && <span className="error" id="message-error">{errors.message}</span>}
             </div>

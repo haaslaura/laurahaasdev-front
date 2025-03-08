@@ -44,6 +44,14 @@
 
 .skill-box i {
     font-size: 3em;
+}
+
+.skill-box img {
+    width: 48px;
+    height: auto;
+}
+
+.skill-box i, .skill-box img {
     margin-bottom: 10px;
     color: var(--main-text-color);
 }

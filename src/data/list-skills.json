@@ -3,36 +3,42 @@
         "id": "01",
         "name": "React.js",
         "icon": "fa-brands fa-react",
-        "type": "hard skill"
+        "type": "fontawesome",
+        "kind": "hard skill"
     },
     {
         "id": "02",
         "name": "JavaScript",
         "icon": "fa-brands fa-js",
-        "type": "hard skill"
+        "type": "fontawesome",
+        "kind": "hard skill"
     },
     {
         "id": "03",
         "name": "React Router",
-        "icon": ".",
-        "type": "hard skill"
+        "icon": "icon-react-router.svg",
+        "type": "svg",
+        "kind": "hard skill"
     },
     {
         "id": "04",
         "name": "Redux",
-        "icon": ".",
-        "type": "hard skill"
+        "icon": "icon-redux.svg",
+        "type": "svg",
+        "kind": "hard skill"
     },
     {
         "id": "05",
         "name": "GitHub",
         "icon": "fa-brands fa-github",
-        "type": "hard skill"
+        "type": "fontawesome",
+        "kind": "hard skill"
     },
     {
         "id": "06",
         "name": "Jest",
-        "icon": ".",
-        "type": "hard skill"
+        "icon": "icon-jest.svg",
+        "type": "svg",
+        "kind": "hard skill"
     }
 ]

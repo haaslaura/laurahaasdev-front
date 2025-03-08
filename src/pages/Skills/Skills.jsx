@@ -4,11 +4,7 @@ import SkillElement from "../../components/SkillElement/SkillElement"
 import PageTitle from "../../components/PageTitle/PageTitle";
 
 
-
-const Skills = () => {
-
-    console.log(skillsList);
-    
+const Skills = () => {   
 
     return (
         <section id="skills-section">
@@ -19,6 +15,7 @@ const Skills = () => {
                         key={skill.id}
                         text={skill.name}
                         icon={skill.icon}
+                        type={skill.type}
                     />
                 ))}
             </div>
