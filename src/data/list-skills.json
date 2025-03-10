@@ -40,5 +40,61 @@
         "icon": "icon-jest.svg",
         "type": "svg",
         "kind": "hard skill"
+    },
+    {
+        "id": "07",
+        "name": "Vitest",
+        "icon": "icon-vitest.svg",
+        "type": "svg",
+        "kind": "hard skill"
+    },
+    {
+        "id": "08",
+        "name": "CSS3",
+        "icon": "fa-brands fa-css3-alt",
+        "type": "fontawesome",
+        "kind": "hard skill"
+    },
+    {
+        "id": "09",
+        "name": "HTML5",
+        "icon": "fa-brands fa-html5",
+        "type": "fontawesome",
+        "kind": "hard skill"
+    },
+    {
+        "id": "10",
+        "name": "Sass",
+        "icon": "fa-brands fa-sass",
+        "type": "fontawesome",
+        "kind": "hard skill"
+    },
+    {
+        "id": "15",
+        "name": "Bootstrap",
+        "icon": "fa-brands fa-bootstrap",
+        "type": "fontawesome",
+        "kind": "hard skill"
+    },
+    {
+        "id": "12",
+        "name": "PHP",
+        "icon": "fa-brands fa-php",
+        "type": "fontawesome",
+        "kind": "hard skill"
+    },
+    {
+        "id": "13",
+        "name": "PhpMyAdmin",
+        "icon": "icon-phpmyadmin.svg",
+        "type": "svg",
+        "kind": "hard skill"
+    },
+    {
+        "id": "14",
+        "name": "Illustrator",
+        "icon": "fa-solid fa-bezier-curve",
+        "type": "fontawesome",
+        "kind": "hard skill"
     }
 ]
