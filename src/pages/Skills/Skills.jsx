@@ -8,16 +8,18 @@ const Skills = () => {
 
     return (
         <section id="skills-section">
-            <PageTitle text="Compétences" classColorName="dark-h1" />
-            <div id="skills-section__list">
-                {skillsList.map((skill) => (
-                    <SkillElement
-                        key={skill.id}
-                        text={skill.name}
-                        icon={skill.icon}
-                        type={skill.type}
-                    />
-                ))}
+            <div className="section-content">
+                <PageTitle text="Compétences" classColorName="dark-h1" />
+                <div id="skills-section__list">
+                    {skillsList.map((skill) => (
+                        <SkillElement
+                            key={skill.id}
+                            text={skill.name}
+                            icon={skill.icon}
+                            type={skill.type}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     )

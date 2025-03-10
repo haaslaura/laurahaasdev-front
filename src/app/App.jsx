@@ -12,6 +12,7 @@ import Contact from '../pages/Contact/Contact'
 import Portfolio from '../pages/Portolio/Portfolio'
 import Error from '../pages/Error/Error'
 import Main from '../layouts/Main/Main'
+import LegalInformation from '../pages/LegalInformation/LegalInformation'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/formations' element={<EducationalBackground />} />
           <Route path='/realisations' element={<Portfolio />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/informations-legales' element={<LegalInformation />} />
           <Route path='*' element={<Error />} />
         
         </Route>

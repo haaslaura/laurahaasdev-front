@@ -1,11 +1,16 @@
 import "./button.css"
 
-const Button = ({ onClick, text, as: Component = 'button', ...rest }) => {
+const Button = ({ onClick, text, as: Component = 'button', type = 'button', ...rest }) => {
 
     return (
-        <Component onClick={onClick} className="button-container" {...rest}>
+        <Component
+            onClick={onClick}
+            className="button-container"
+            type={type}
+            {...rest}
+        >
             <span className="mask-text" >{text}</span>
-            <button className="lh-btn btn-animation" name="Hover">{text}</button>
+            <span className="lh-btn btn-animation">{text}</span>
         </Component>
     );
 };

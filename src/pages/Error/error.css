@@ -1,9 +1,5 @@
 #error-section {
     background: linear-gradient(90deg, #4fc4cf, #994ff3);
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
 }
 
 #error-section h1 {

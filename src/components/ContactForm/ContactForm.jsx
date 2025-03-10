@@ -1,5 +1,7 @@
 import "./contactForm.css"
+import Button from "../Button/Button"
 import { useState } from "react"
+import { Link } from "react-router";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -21,7 +23,7 @@ const ContactForm = () => {
         if (!value.trim()) {
             setErrors((prevErrors) => ({
                 ...prevErrors,
-                [name]: "Ce champ est obligatoire.",
+                [name]: "Ce champ est obligatoire",
             }));
         } else {
             setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
@@ -41,13 +43,14 @@ const ContactForm = () => {
     
     return (
         <form className="contact-form" onSubmit={handleSubmit} noValidate>
+            <p id="contact-form__info">*Les champs marqués d'un astérisque sont obligatoires</p>
             <div>
                 <div role="group" aria-labelledby="Nom">
                     <label htmlFor="name">Nom</label>
                     <input
                         type="text"
                         name="name"
-                        placeholder="Nom"
+                        placeholder="Nom*"
                         value={formData.name}
                         onChange={handleChange}
                         onBlur={handleBlur}
@@ -55,14 +58,19 @@ const ContactForm = () => {
                         required
                         aria-required="true"
                     />
-                    {errors.name && <span className="error" id="name-error">{errors.name}</span>}
+                    {
+                        errors.name &&
+                            <span className="error" id="name-error">
+                                <i class="fa-solid fa-circle-exclamation"></i> {errors.name}
+                            </span>
+                    }
                 </div>
                 <div role="group" aria-labelledby="Email">
                     <label htmlFor="email">Email</label>
                     <input
                         type="email"
                         name="email"
-                        placeholder="Email"
+                        placeholder="Email*"
                         value={formData.email}
                         onChange={handleChange}
                         onBlur={handleBlur}
@@ -70,7 +78,12 @@ const ContactForm = () => {
                         required
                         aria-required="true"
                     />
-                    {errors.email && <span className="error" id="email-error">{errors.email}</span>}
+                    {
+                        errors.name &&
+                            <span className="error" id="name-error">
+                                <i class="fa-solid fa-circle-exclamation"></i> {errors.name}
+                            </span>
+                    }
                 </div>
             </div>
             <div role="group" aria-labelledby="Téléphone">
@@ -78,7 +91,7 @@ const ContactForm = () => {
                 <input
                     type="tel"
                     name="phone"
-                    placeholder="Téléphone"
+                    placeholder="Téléphone*"
                     value={formData.phone}
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -86,13 +99,18 @@ const ContactForm = () => {
                     required
                     aria-required="true"
                 />
-                {errors.phone && <span className="error" id="phone-error">{errors.phone}</span>}
+                {
+                    errors.name &&
+                        <span className="error" id="name-error">
+                            <i class="fa-solid fa-circle-exclamation"></i> {errors.name}
+                        </span>
+                }
             </div>
             <div role="group" aria-labelledby="Message">
                 <label htmlFor="message">Message</label>
                 <textarea
                     name="message"
-                    placeholder="Votre message"
+                    placeholder="Votre message*"
                     value={formData.message}
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -100,9 +118,17 @@ const ContactForm = () => {
                     required
                     aria-required="true"
                 ></textarea>
-                {errors.message && <span className="error" id="message-error">{errors.message}</span>}
+                {
+                    errors.name &&
+                        <span className="error" id="name-error">
+                            <i class="fa-solid fa-circle-exclamation"></i> {errors.name}
+                        </span>
+                }
             </div>
-            <button type="submit">Envoyer</button>
+            <Button
+                text="Envoyer"
+                type="submit"
+            />
         </form>
     );
 };

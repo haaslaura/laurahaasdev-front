@@ -1,43 +1,26 @@
 #presentation {
     background: linear-gradient(90deg, #4fc4cf, #994ff3);
-    flex-direction: column;
-}
-
-#presentation div {
-    display: flex;
-    align-items: center;
 }
 
 #presentation__title {
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
     flex-direction: column-reverse;
 }
 
-#presentation__content, #presentation__text {
-    flex-direction: column;
-}
-
 #presentation__content {
-    margin-bottom: 40px;
-}
-
-#presentation__btn {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 360px;
-    margin-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #presentation h1 {
     font-size: 1.9em;
     margin-bottom: 1em;
-    text-align: center;
 }
 
-#presentation h2 {
-    font-size: 1.5em;
-}
+#presentation h2 {font-size: 1.5em;}
 
 #presentation h1, #presentation h2 {
     color: white;
@@ -51,25 +34,34 @@
     margin-bottom: 20px;
 }
 
+#presentation__text {
+    width: 100%;
+    max-width: 530px;
+}
+
 #presentation p {
     text-align: center;
     text-wrap: balance;
-    margin: 0.8em 3em;
+    margin-bottom: 1em;
+}
+
+#presentation__button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 380px;
+    margin: 1.2em auto 0 auto;
 }
 
 @media screen and (min-width: 992px) {
-    #presentation {
-        padding: 1.3em 3em 1.3em 4em;
-    }
     #presentation__content {
         flex-direction: row-reverse;
+        gap: 20px;
     }
-    #presentation__text {
-        max-width: 800px;
-    }
+
     #presentation img {
-        margin-left: auto;
-        margin-right: auto;
         margin-bottom: 0px;
     }
 }

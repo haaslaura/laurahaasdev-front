@@ -152,6 +152,11 @@ const Menu = () => {
                                 <i className="fa-solid fa-comment"></i> Contact
                             </a>
                         </li>
+                        <li role="none">
+                            <a role="menuitem" id="legal-info" className="header__menu-item" href="/informations-legales">
+                            <i class="fa-solid fa-circle-info"></i> Informations légales
+                            </a>
+                        </li>
                     </menu>
                 </div>
             </nav>
