@@ -30,6 +30,7 @@ form div[role="group"]{
     color: var(--main-text-color);
     font-size: 0.8rem;
     font-weight: 500;
+    height: 0px;
 }
 
 /* bg color button */

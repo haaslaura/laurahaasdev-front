@@ -1,7 +1,7 @@
 import "./contactForm.css"
 import Button from "../Button/Button"
 import { useState } from "react"
-import { Link } from "react-router";
+
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -30,15 +30,92 @@ const ContactForm = () => {
         }
     };
     
-    const handleChange = (e) => {
+    const handleChange = (e) => {        
         const { name, value } = e.target;
         setFormData((prevData) => ({ ...prevData, [name]: value }));
-        setErrors((prevErrors) => ({ ...prevErrors, [name]: "" })); // Efface l'erreur quand l'utilisateur tape
+        setErrors((prevErrors) => ({ ...prevErrors, [name]: "" })); // Clears the error when the user types
     };
+
+
+    const isValidInput = (value) => {        
+        const sanitizedInput = value.trim().replace(/[=<>\[\]]/g, "")
+        if (sanitizedInput.length === 0) {
+            return "Ce champs est obligatoire"
+        } else {
+            return ""; // No problem detected
+        }
+    }
+
+    const isValidEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email) ? "" : "Veuillez entrer une adresse email valide.";
+    };
+
+    const sanitizedContent = (content) => {
+        let sanitizedContent = content.trim().replace(/[=<>\[\]]/g, "")
+        return sanitizedContent
+    }
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Formulaire soumis ! (pas de back-end ici)");
+        
+        let newErrors = {}; // Stores any errors
+
+        // Checking and cleaning fields
+        Object.keys(formData).forEach((field) => {
+        
+            switch (field) {
+                case "name":
+                    const inputNameError = isValidInput(formData.name);
+                    if (inputNameError.length > 0) {
+                        newErrors[field] = inputNameError;
+                    }
+                    break;
+        
+                case "phone":
+                    const inputPhoneError = isValidInput(formData.phone);
+                    if (inputPhoneError.length > 0) {
+                        newErrors[field] = inputPhoneError;
+                    }
+                    break;
+
+                case "email":
+                    const inputEmailError = isValidEmail(formData.email);
+                    if (inputEmailError.length > 0) {
+                        newErrors[field] = inputEmailError;
+                    }
+                    break;
+
+                case "message":
+                    const inputMessageError = isValidInput(formData.message);
+                    if (inputMessageError.length > 0) {
+                        newErrors[field] = inputMessageError;
+                    }
+                    break;
+        
+                default:
+                    console.log("Champ non reconnu");
+            }
+            console.log(newErrors);
+        });
+
+        // Update errors if necessary
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+
+        // If everything is valid, you can submit the form
+        console.log("Données soumises :", {
+            name: sanitizedContent(formData.name),
+            email: sanitizedContent(formData.email),
+            phone: sanitizedContent(formData.phone),
+            message: sanitizedContent(formData.message)
+        });
+
+        // Reset the form after submission
+        setFormData({ name: "", email: "", phone: "", message: "" });
+        setErrors({ name: "", email: "", phone: "", message: "" });
     };
     
     return (
@@ -50,18 +127,20 @@ const ContactForm = () => {
                     <input
                         type="text"
                         name="name"
+                        id="name"
                         placeholder="Nom*"
                         value={formData.name}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        aria-describedby="name-error"
                         required
                         aria-required="true"
+                        minLength="2"
+                        maxLength="50"
                     />
                     {
                         errors.name &&
-                            <span className="error" id="name-error">
-                                <i class="fa-solid fa-circle-exclamation"></i> {errors.name}
+                            <span className="error" aria-live="assertive">
+                                <i className="fa-solid fa-circle-exclamation"></i> {errors.name}
                             </span>
                     }
                 </div>
@@ -70,18 +149,20 @@ const ContactForm = () => {
                     <input
                         type="email"
                         name="email"
+                        id="email"
                         placeholder="Email*"
                         value={formData.email}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        aria-describedby="email-error"
                         required
                         aria-required="true"
+                        minLength="2"
+                        maxLength="50"
                     />
                     {
-                        errors.name &&
-                            <span className="error" id="name-error">
-                                <i class="fa-solid fa-circle-exclamation"></i> {errors.name}
+                        errors.email &&
+                            <span className="error" aria-live="assertive">
+                                <i className="fa-solid fa-circle-exclamation"></i> {errors.email}
                             </span>
                     }
                 </div>
@@ -91,18 +172,20 @@ const ContactForm = () => {
                 <input
                     type="tel"
                     name="phone"
+                    id="phone"
                     placeholder="Téléphone*"
                     value={formData.phone}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    aria-describedby="phone-error"
                     required
                     aria-required="true"
+                    minLength="2"
+                    maxLength="50"
                 />
                 {
-                    errors.name &&
-                        <span className="error" id="name-error">
-                            <i class="fa-solid fa-circle-exclamation"></i> {errors.name}
+                    errors.phone &&
+                        <span className="error" aria-live="assertive">
+                            <i className="fa-solid fa-circle-exclamation"></i> {errors.phone}
                         </span>
                 }
             </div>
@@ -110,18 +193,19 @@ const ContactForm = () => {
                 <label htmlFor="message">Message</label>
                 <textarea
                     name="message"
+                    id="message"
                     placeholder="Votre message*"
                     value={formData.message}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    aria-describedby="message-error"
                     required
                     aria-required="true"
+                    minLength="2"
                 ></textarea>
                 {
-                    errors.name &&
-                        <span className="error" id="name-error">
-                            <i class="fa-solid fa-circle-exclamation"></i> {errors.name}
+                    errors.message &&
+                        <span className="error" aria-live="assertive">
+                            <i className="fa-solid fa-circle-exclamation"></i> {errors.message}
                         </span>
                 }
             </div>
