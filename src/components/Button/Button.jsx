@@ -1,47 +1,52 @@
-import { useHover } from "@uidotdev/usehooks";
 import "./button.css"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
+
+/**
+ * Animated button with CSS mask effect
+ *
+ * @param {Object} props - Propriétés du bouton.
+ * @param {Function} props.onClick - Function called when the button is clicked
+ * @param {string} props.text - Text displayed inside the button
+ * @param {keyof JSX.IntrinsicElements} [props.as='button'] - HTML element used for the button (ex: 'button', 'a', 'div').
+ * @param {string} [props.type='button'] - Button type (useful if `as="button"`)
+ * @param {Object} [props.rest] - Other properties passed to the component
+ *
+ * @returns {JSX.Element} - Animated button component
+ */
 const Button = ({ onClick, text, as: Component = 'button', type = 'button', ...rest }) => {
 
-    const [ref, hovering] = useHover()
-    // console.log(hovering);
-
-    // function MouseOver(event) {
-    //     event.target.style.background = 'red';
-    //   }
-    //   function MouseOut(event){
-    //     event.target.style.background="";
-    //   }
-    
-    function mouseOver(e) {
-        console.log("survolé");
-        e.target.classList.add("btn-animation"); // ajouter la classe
-    }
-
+    const [isHovered, setIsHovered] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
+       
     useEffect(() => {
+        setIsMounted(true);
+        return () => setIsMounted(false);
+    }, []);
 
-        // Ici le code, l'"effet" qui sera exécuté
-        
-        return () => {
-            // l'effet de clean up (nettoyage) ==> UNMOUNT
-            // retirer la classe
-        }
-      }, [mouseOver]); //Permet de provoquer la mise à jour de cet effet si besoin
+    const handleMouseLeave = () => {
+        setTimeout(() => setIsHovered(false), 700);
+    };
 
     return (
         <Component
             onClick={onClick}
             className="button-container"
             type={type}
-            {...rest}
-
-            onMouseOver={mouseOver}
-            
+            {...rest}            
         >
             <span className="mask-text" >{text}</span>
-            {/* <span className="lh-btn btn-animation" ref={ref}>{text}</span> */}
-            <span className="lh-btn" ref={ref}>{text}</span>
+            <span
+                className={`
+                    lh-btn
+                    ${isHovered ? "hovered" : ""}
+                    ${isMounted ? "mounted" : ""}
+                `}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={handleMouseLeave}
+            >
+                {text}
+            </span>
         </Component>
     );
 };
