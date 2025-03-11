@@ -29,10 +29,12 @@
     height: 100%;
     line-height: 1.4em;
     text-transform: capitalize;
+    font-weight: 500;
 }
 
 .lh-btn {
     padding: 0px;
+    color: var(--main-text-color);
 }
 
 .mask-text {

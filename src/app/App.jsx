@@ -17,7 +17,6 @@ import LegalInformation from '../pages/LegalInformation/LegalInformation'
 
 function App() {
 
-
   return (
     <BrowserRouter>
       <Header />
