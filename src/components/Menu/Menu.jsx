@@ -117,6 +117,7 @@ const Menu = () => {
                     onClick={toggleMenu}
                 >
                     <span className="menu-btn__burger-icon">
+                        <span className="hidden-text">Ouvrir le menu</span>
                         <span></span>
                         <span></span>
                         <span></span>
@@ -130,11 +131,11 @@ const Menu = () => {
                     aria-labelledby="burger__menubutton" 
                 >
                     {/* MENU CONTENT */}
-                    <button className="header__menu-btn-close" onClick={toggleMenu} aria-label="Fermer le menu"></button>
+                    <button className="header__menu-btn-close" onClick={toggleMenu} aria-label="Fermer le menu"><span className="hidden-text">Fermer</span></button>
                     <menu className="header__menu-content" role="menu">
                         <li role="none">
                             <a role="menuitem" id="home" className="header__menu-item" href="/">
-                                <i className="fa-solid fa-house"></i> Home
+                                <i className="fa-solid fa-house"></i> Présentation
                             </a>
                         </li>
                         <li role="none">
@@ -154,7 +155,7 @@ const Menu = () => {
                         </li>
                         <li role="none">
                             <a role="menuitem" id="legal-info" className="header__menu-item" href="/informations-legales">
-                            <i class="fa-solid fa-circle-info"></i> Informations légales
+                            <i className="fa-solid fa-circle-info"></i> Informations légales
                             </a>
                         </li>
                     </menu>

@@ -118,6 +118,12 @@
   background-color: #00000000;
 }
 
+.hidden-text {
+  overflow: hidden;
+  position: absolute;
+  top: -10000px;
+}
+
 .header__menu-btn-close:hover {
   opacity: 1;
   transition: opacity 0.6s ease;
