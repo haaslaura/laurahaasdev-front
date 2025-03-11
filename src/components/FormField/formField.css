@@ -1,9 +1,3 @@
-#contact-form__info {
-    margin: 0;
-    color: #fff;
-    font-size: 0.8em;
-}
-
 label {
     overflow: hidden;
     position: absolute;
@@ -32,15 +26,4 @@ form div[role="group"]{
     font-size: 0.8rem;
     font-weight: 500;
     height: 0px;
-}
-
-/* bg color button */
-
-.contact-form .mask-text {
-    background-color: var(--second-color);
-    color: #fff;
-}
-
-.contact-form .button-container {
-    border: none;
 }
