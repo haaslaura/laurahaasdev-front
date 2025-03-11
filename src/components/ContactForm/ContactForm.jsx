@@ -1,6 +1,7 @@
 import "./contactForm.css"
 import Button from "../Button/Button"
 import { useState } from "react"
+import FormField from "../FormField/FormField";
 
 
 const ContactForm = () => {
@@ -17,24 +18,6 @@ const ContactForm = () => {
         phone: "",
         message: "",
     });
-    
-    const handleBlur = (e) => {
-        const { name, value } = e.target;
-        if (!value.trim()) {
-            setErrors((prevErrors) => ({
-                ...prevErrors,
-                [name]: "Ce champ est obligatoire",
-            }));
-        } else {
-            setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
-        }
-    };
-    
-    const handleChange = (e) => {        
-        const { name, value } = e.target;
-        setFormData((prevData) => ({ ...prevData, [name]: value }));
-        setErrors((prevErrors) => ({ ...prevErrors, [name]: "" })); // Clears the error when the user types
-    };
 
     const isValidInput = (value) => {        
         const sanitizedInput = value.trim().replace(/[=<>\[\]]/g, "")
@@ -121,92 +104,58 @@ const ContactForm = () => {
         <form className="contact-form" onSubmit={handleSubmit} noValidate>
             <p id="contact-form__info">*Les champs marqués d'un astérisque sont obligatoires</p>
             <div>
-                <div role="group" aria-labelledby="Nom">
-                    <label htmlFor="name">Nom</label>
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Nom*"
-                        value={formData.name}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        required
-                        aria-required="true"
-                        minLength="2"
-                        maxLength="50"
-                    />
-                    {
-                        errors.name &&
-                            <span className="error" aria-live="assertive">
-                                <i className="fa-solid fa-circle-exclamation"></i> {errors.name}
-                            </span>
-                    }
-                </div>
-                <div role="group" aria-labelledby="Email">
-                    <label htmlFor="email">Email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email*"
-                        value={formData.email}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        required
-                        aria-required="true"
-                        minLength="2"
-                        maxLength="50"
-                    />
-                    {
-                        errors.email &&
-                            <span className="error" aria-live="assertive">
-                                <i className="fa-solid fa-circle-exclamation"></i> {errors.email}
-                            </span>
-                    }
-                </div>
-            </div>
-            <div role="group" aria-labelledby="Téléphone">
-                <label htmlFor="phone">Téléphone</label>
-                <input
-                    type="tel"
-                    name="phone"
-                    id="phone"
-                    placeholder="Téléphone*"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    required
-                    aria-required="true"
+                <FormField
+                    formData={formData}
+                    setFormData={setFormData}
+                    errors={errors}
+                    setErrors={setErrors}
+                    type="text"
+                    labelContent="Nom"
+                    elementName="name" // for the id, name, htmlFor, errors[elementName]...
+                    placeholder="Nom*"
                     minLength="2"
                     maxLength="50"
-                />
-                {
-                    errors.phone &&
-                        <span className="error" aria-live="assertive">
-                            <i className="fa-solid fa-circle-exclamation"></i> {errors.phone}
-                        </span>
-                }
-            </div>
-            <div role="group" aria-labelledby="Message">
-                <label htmlFor="message">Message</label>
-                <textarea
-                    name="message"
-                    id="message"
-                    placeholder="Votre message*"
-                    value={formData.message}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                     required
-                    aria-required="true"
+                />
+                <FormField
+                    formData={formData}
+                    setFormData={setFormData}
+                    errors={errors}
+                    setErrors={setErrors}
+                    type="text"
+                    labelContent="Email"
+                    elementName="email"
+                    placeholder="Email*"
                     minLength="2"
-                ></textarea>
-                {
-                    errors.message &&
-                        <span className="error" aria-live="assertive">
-                            <i className="fa-solid fa-circle-exclamation"></i> {errors.message}
-                        </span>
-                }
+                    maxLength="50"
+                    required
+                />
+                <FormField
+                    formData={formData}
+                    setFormData={setFormData}
+                    errors={errors}
+                    setErrors={setErrors}
+                    type="text"
+                    labelContent="Téléphone"
+                    elementName="phone"
+                    placeholder="Téléphone*"
+                    minLength="2"
+                    maxLength="50"
+                    required
+                />
+                <FormField
+                    formData={formData}
+                    setFormData={setFormData}
+                    errors={errors}
+                    setErrors={setErrors}
+                    labelContent="Message"
+                    elementName="message"
+                    placeholder="Message*"
+                    minLength="2"
+                    maxLength="400"
+                    as="textarea"
+                    required
+                />
             </div>
             <Button
                 text="Envoyer"
