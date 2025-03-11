@@ -4,36 +4,6 @@
     font-size: 0.8em;
 }
 
-label {
-    overflow: hidden;
-    position: absolute;
-    top: -10000px;
-}
-
-input,
-textarea {
-    width: 96%;
-    font-size: 1rem;
-    border-radius: 3px;
-    border: none;
-    padding: 8px;
-}
-
-textarea {
-    height: 150px;
-}
-
-form div[role="group"]{
-    margin-bottom: 0.9em;
-}
-
-.error {
-    color: var(--main-text-color);
-    font-size: 0.8rem;
-    font-weight: 500;
-    height: 0px;
-}
-
 /* bg color button */
 
 .contact-form .mask-text {
