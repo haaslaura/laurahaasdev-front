@@ -30,8 +30,6 @@ To run the project locally:
 
 🔲 Portfolio section with project previews
 
-🔲 Dark mode toggle
-
 🔲 Contact form integration
 
 ## 🌍 Live Demo (Coming Soon)

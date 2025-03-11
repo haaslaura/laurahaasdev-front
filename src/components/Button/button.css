@@ -35,6 +35,16 @@
 .lh-btn {
     padding: 0px;
     color: var(--main-text-color);
+
+    background-color: #ffffff;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+    
+    -webkit-mask-size: 3000% 100%;
+    mask-size: 3000% 100%;
+    
+    cursor: pointer;
+    border: 1px solid #fff;
 }
 
 .mask-text {
@@ -44,25 +54,17 @@
     overflow: hidden;
 }
 
-.btn-animation {
-    background-color: #ffffff;
-    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
-    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
-    
-    -webkit-mask-size: 3000% 100%;
-    mask-size: 3000% 100%;
-    
-    /* border: none; */
-    cursor: pointer;
-    border: 1px solid #fff;
-    
-    -webkit-animation: ani2 0.7s steps(29) forwards;
-    animation: ani2 0.7s steps(29) forwards;
-}
-
-.btn-animation:hover {
+/* Animation from the very first flight */
+.lh-btn.mounted:hover {
     -webkit-animation: ani 0.7s steps(29) forwards;
     animation: ani 0.7s steps(29) forwards;
+}
+
+
+/* Animation when the mouse leaves the button */
+.lh-btn.hovered:not(:hover) {
+    -webkit-animation: ani2 0.7s steps(29) forwards;
+    animation: ani2 0.7s steps(29) forwards;
 }
 
 @-webkit-keyframes ani {

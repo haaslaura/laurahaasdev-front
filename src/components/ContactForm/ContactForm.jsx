@@ -36,7 +36,6 @@ const ContactForm = () => {
         setErrors((prevErrors) => ({ ...prevErrors, [name]: "" })); // Clears the error when the user types
     };
 
-
     const isValidInput = (value) => {        
         const sanitizedInput = value.trim().replace(/[=<>\[\]]/g, "")
         if (sanitizedInput.length === 0) {
