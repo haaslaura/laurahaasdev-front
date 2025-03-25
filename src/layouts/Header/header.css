@@ -4,16 +4,17 @@ header {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    
     position: sticky;
+    height: var(--header-height);
     background-color: #fffffe;
     top: 0px;
-    height: var(--header-height);
     z-index: 2;
     border-bottom: 1px #C7C7C7 solid;
     box-shadow: 6px 6px 25px rgba(199,199,199, 0.5);
 }
 
-#desktop-nav ul {
+#desktop-nav menu {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -23,7 +24,7 @@ header {
     align-items: center;
 }
 
-#desktop-nav ul li a:not(#home-link) {
+#desktop-nav li a:not(#home-link) {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

@@ -40,11 +40,11 @@ const Header = () => {
                 </>
             :
                 <nav id='desktop-nav'>
-                    <ul>
-                        <li><Link to="/#skills-section">Compétences</Link></li>
-                        <li><Link to="/#educbg-section">Formations</Link></li>
-                        <li id='home-link'>
-                            <Link to="/#presentation">
+                    <menu role='menu'>
+                        <li role="none"><Link role="menuitem" to="/#skills-section">Compétences</Link></li>
+                        <li role="none"><Link role="menuitem" to="/#educbg-section">Formations</Link></li>
+                        <li role="none" id='home-link'>
+                            <Link role="menuitem" to="/#presentation">
                                 <img
                                     role='link'
                                     src={logo}
@@ -57,9 +57,9 @@ const Header = () => {
                                 <p>Développeuse Front-end</p>
                             </div>
                         </li>
-                        <li><Link to="/">Portfolio</Link></li>
-                        <li><Link to="/#contact-section">Contact <i className="fa-regular fa-envelope"></i></Link></li>
-                    </ul>
+                        <li role="none"><Link role="menuitem" to="/">Portfolio</Link></li>
+                        <li role="none"><Link role="menuitem" to="/#contact-section">Contact <i className="fa-regular fa-envelope"></i></Link></li>
+                    </menu>
                 </nav>
             }
         </header>

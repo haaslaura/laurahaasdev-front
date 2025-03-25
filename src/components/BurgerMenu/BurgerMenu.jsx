@@ -1,5 +1,6 @@
 import "./burgerMenu.css";
 import { useEffect, useRef, useState } from "react";
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 /**
@@ -134,29 +135,24 @@ const Menu = () => {
                     <button className="header__menu-btn-close" onClick={toggleMenu} aria-label="Fermer le menu"><span className="hidden-text">Fermer</span></button>
                     <menu className="header__menu-content" role="menu">
                         <li role="none">
-                            <a role="menuitem" id="home" className="header__menu-item" href="/">
+                            <Link role="menuitem" id="home" className="header__menu-item" to="/#presentation">
                                 <i className="fa-solid fa-house"></i> Présentation
-                            </a>
+                            </Link>
                         </li>
                         <li role="none">
-                            <a role="menuitem" id="skills" className="header__menu-item" href="/competences">
+                            <Link role="menuitem" id="skills" className="header__menu-item" to="/#skills-section">
                                 <i className="fa-solid fa-gear"></i> Compétences
-                            </a>
+                            </Link>
                         </li>
                         <li role="none">
-                            <a role="menuitem" id="educational-bg" className="header__menu-item" href="/formations">
+                            <Link role="menuitem" id="educational-bg" className="header__menu-item" to="/#educbg-section">
                                 <i className="fa-solid fa-graduation-cap"></i> Formations
-                            </a>
+                            </Link>
                         </li>
                         <li role="none">
-                            <a role="menuitem" id="contact" className="header__menu-item" href="/contact">
+                            <Link role="menuitem" id="contact" className="header__menu-item" to="/#contact-section">
                                 <i className="fa-solid fa-comment"></i> Contact
-                            </a>
-                        </li>
-                        <li role="none">
-                            <a role="menuitem" id="legal-info" className="header__menu-item" href="/informations-legales">
-                            <i className="fa-solid fa-circle-info"></i> Informations légales
-                            </a>
+                            </Link>
                         </li>
                     </menu>
                 </div>

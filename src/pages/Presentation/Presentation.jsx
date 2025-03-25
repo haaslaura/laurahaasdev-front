@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import profilePic from "../../assets/portrait-laura-haas.jpg";
 import "./presentation.css";
 import Button from "../../components/Button/Button";
-import { Link } from "react-router";
+
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 const Presentation = () => {
@@ -47,12 +48,12 @@ const Presentation = () => {
                         <div id="presentation__button-container">
                             <Button
                                 as={Link}
-                                to="/contact"
+                                to="/#contact-section"
                                 text="Prenons contact"
                             />
                             <Button
                                 as={Link}
-                                to="/competences"
+                                to="/#skills-section"
                                 text="Mes compétences"
                             />
                         </div>
