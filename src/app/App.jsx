@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router'
+import { useEffect, useState } from 'react'
 
 import './app.css'
 
@@ -11,10 +12,18 @@ import LegalInformation from '../pages/LegalInformation/LegalInformation'
 
 function App() {
 
+  const [isValidRoute, setIsValidRoute] = useState(true);
+
+    useEffect(() => {
+        const validRoutes = ['/', '/mentions-legales'];
+        setIsValidRoute(validRoutes.includes(window.location.pathname));
+    }, []);
+
   return (
     <BrowserRouter>
       <Header />
       <Routes>
+        {/* {isValidRoute ? () : () } */}
 
         <Route path='/' element={<Home />}/>
         <Route path='/mentions-legales' element={<LegalInformation />}/>
