@@ -64,6 +64,10 @@ a {
   color: var(--main-color);
 }
 
+a:hover {
+  color: #44a6af;
+}
+
 p {
   margin: 0.8em 0;
 }

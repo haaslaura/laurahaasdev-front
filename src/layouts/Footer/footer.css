@@ -1,84 +1,39 @@
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #fffffe;
     border-top: 1px #C7C7C7 solid;
-    align-items: center;
-    padding-top:2em;
-    padding-bottom:2em;
-    }
-    
-    .text-author-rights {
-    margin-left: 5%;
-    }
-    
-    footer ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    }
-    
-    footer li {
-    border-right: 1px #C7C7C7 solid;
-    margin-right: 10px;
-    padding-right: 10px;
-    }
-    
-    footer li:last-child {
-    border-right: none;
-    margin-right: 0;
-    padding-right: 0;
-    }
-    
-    footer li a {
-    color: var(--main-text-color);
-    text-decoration:none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    text-transform: capitalize;
-    }
-    
-    footer li a:hover {
-    color: #4fc4cf;
-    }
-    
-    footer li a:active {
-    color: #4fc4cf;
-    }
-
-@media screen and (max-width: 920px) {
-
-footer {
-    display: flex;
-    flex-direction: column;
+    padding: 1em 0 1em 0;
 }
-.text-author-rights {
-    order: 2;
-    margin-left: 0;
+
+footer p {
     text-align: center;
 }
-.footer-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    order: 1;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 2em;
+
+footer a {
+    margin-bottom: 1em;    
 }
-#menu-footer-1 {
-    order: 3;
+
+@media screen and (min-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+        text-align: center;
+        padding: 1em;
+    }
+    footer p {
+        text-align: center;
+    }
+    footer p, footer a {
+        margin: 10px 0 10px 0;
+    }
 }
-#menu-footer-2 {
-    order: 1;
-}
-#menu-footer-3 {
-    order: 2;
-}
-footer li {
-    border-bottom: 1px #C7C7C7 solid;
-    border-right:none;
-}
+
+@media screen and (min-width: 992px) { 
+    footer {
+        gap: 2em;
+    }
 }
