@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <footer>
             <p>© {currentYear}/{currentMonth} | Réalisé par Laura Haas, tous droits réservés.</p>
-            <Link to="/mentions-legales/#legalinf-section" aria-label='Aller aux mentions légales'>Mentions légales</Link>
+            <Link to="/mentions-legales" aria-label='Aller aux mentions légales'>Mentions légales</Link>
             <Link to="#presentation">Revenir en haut de la page <i className="fa-solid fa-arrow-up"></i></Link>
         </footer>
     )
