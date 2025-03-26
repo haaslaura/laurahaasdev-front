@@ -1,56 +1,61 @@
 import { useEffect, useState } from "react"
 import "./project.css"
+import { useParams } from "react-router"
+import projects from "../../data/list-projects.json"
+import Error from "../Error/Error"
+import Button from "../../components/Button/Button"
+import { Link } from "react-router-dom"
+import { skillFactory } from "../../factories/skillFactory"
 
-const ProjectCard = () => {
+const Project = () => {
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
-    
-        useEffect(() => {
-            const handleResize = () => {
-                setIsMobile(window.innerWidth <= 768)
-            }
-            window.addEventListener("resize", handleResize);
-            
-            return () => {
-                window.removeEventListener("resize", handleResize)
-            }
-        }, [setIsMobile])
+    const { id } = useParams();
+    const project = projects.find(proj => proj.id === id);
+    const media = skillFactory(project.type, project.cover);
+
+    // Handling property id errors
+    if (!project) {
+        return <Error />
+    };
 
     return (
-        <section id="presentation">
-            <div className="section-content">
-                <div id="presentation__title">
-                    <h1>Développeuse front-end {isMobile && <br/>}JavaScript / React</h1>
-                    <h2>Qui suis-je ?</h2>
-                </div>
-                
-                <div id="presentation__content">
-                    <img src={profilePic} alt="" />
-                    <div id="presentation__text">
-                        <p>
-                            Passionnée par la technologie depuis l'enfance, je termine en 2025 un parcours de reconversion pour devenir développeuse. Un vrai challenge, après 10&nbsp;ans à accompagner des entreprises dans leur communication et leur marketing !
-                        </p>
-                        <p>
-                            J'aime la dimension technique et la logique sous-jacente des projets informatiques, mais aussi le lien créé avec les utilisateurs : ce sont eux qui sont au cœur de nos réflexions et de nos objectifs.
-                        </p>
-                        <p>
-                            Mon parcours m'a conduite à conjuguer créativité et technique. Soucieuse de l'accessibilité de mes réalisations, je souhaite mettre mes compétences au service d'une équipe dynamique et de projets porteurs de sens.
-                        </p>
-                        <p>
-                            Mon objectif aujourd'hui : progresser continuellement pour vous aider à anticiper les enjeux technologiques de demain !
-                        </p>
-                        <div id="presentation__button-container">
-                            <Button
-                                as={Link}
-                                to="/#contact-section"
-                                text="Prenons contact"
-                            />
-                            <Button
-                                as={Link}
-                                to="/#skills-section"
-                                text="Mes compétences"
-                            />
-                        </div>
+        <section className="project__section">
+             <h1 className="project__title">{project.title}</h1>
+            <div className="project__content">
+                { media.render() }
+                <div className="project__text">
+                    
+                    <h2>📌 Contexte</h2>
+                    <p>{project.context}</p>
+                    
+                    <h2>🚀 Objectifs</h2>
+                    <ul>
+                        {project.objectives.map((objective, i) => (                                
+                            <li key={`key-${i}-objective`}>{objective}</li>
+                        ))}
+                    </ul>
+                    
+                    <h2>📈 Résultats</h2>
+                    <p>{project.achievements}</p>
+                    
+                    <h2>🛠️ Outils</h2>
+                    <ul>
+                        {project.tools.map((tool) => (
+                            <li key={`key-${id}-${tool}`}>{tool}</li>
+                        ))}
+                    </ul>
+                    
+                    <div className="project__button-container">
+                        <Button
+                            as={Link}
+                            to={project.demolink}
+                            text="Demo"
+                        />
+                        <Button
+                            as={Link}
+                            to={project.githublink}
+                            text="Lien GitHub"
+                        />
                     </div>
                 </div>
             </div>
@@ -58,4 +63,4 @@ const ProjectCard = () => {
     )
 }
 
-export default ProjectCard
+export default Project

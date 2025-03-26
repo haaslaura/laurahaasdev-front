@@ -28,7 +28,7 @@ function App() {
         {/* {isValidRoute ? () : () } */}
 
         <Route path='/' element={<Home />} />
-        <Route path='/projets/:id' element={<Project />} />
+        <Route path='/projet/:id' element={<Project />} />
         <Route path='/mentions-legales' element={<LegalInformation />}/>
         <Route path='*' element={<Error />} />
 

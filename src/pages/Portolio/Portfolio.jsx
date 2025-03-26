@@ -5,7 +5,7 @@ import projectsList from "../../data/list-projects.json"
 import PageTitle from "../../components/PageTitle/PageTitle"
 import ProjectCard from "../../components/ProjectCard/ProjectCard"
 
-const Portfolio = () => {   
+const Portfolio = () => {       
 
     return (
         <section id="portfolio">
@@ -15,7 +15,8 @@ const Portfolio = () => {
                 <div id="portfolio__list">
                     {projectsList.map((project) => (
                         <ProjectCard
-                            key={project.id}
+                            key={`key-${project.id}`}
+                            id={project.id}
                             title={project.title}
                             cover={project.cover}                        
                             type={project.type}                        

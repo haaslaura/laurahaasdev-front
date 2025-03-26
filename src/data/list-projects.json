@@ -4,29 +4,19 @@
         "title": "HRnet, application pour les RH",
         "cover": "portfolio-hrnet.jpg",
         "type": "jpg",
-        "context": "Wealth Health utilise une application web interne, appelée HRnet, qui gère les dossiers des employés. L'application est ancienne et utilise jQuery côté front end. Je suis chargés de convertir l'application en React pour réduire la dette technologique.",
+        "context": "La société Wealth Health utilise une application web interne, appelée HRnet, pour gèrer les dossiers des employés. L'application est ancienne et utilise jQuery côté front-end. L'application va être convertie en React.",
         "objectives": [
-            "Analyser la performance d'une application web",
-            "Déployer une application front-end",
-            "Refondre une application pour réduire la dette technique",
-            "Mettre en place son environnement Front-End",
-            "Produire de la documentation technique pour une application"
+            "Refondre une application pour réduire la dette technique,",
+            "Analyser la performance d'une application web,",
+            "Produire de la documentation technique pour une application."
         ],
-        "achievements": [
-            "Déploiement d'une application front-end",
-            "Utilisation de Redux et Redux Toolkit pour centraliser la gestion d'état",
-            "Utilisation de librairie",
-            "Analyse et comparaison des performances de l'ancienne et nouvelle   application",
-            "Création d'un pluggin de modale déployé sur npm",
-            "Production de documentations techniques",
-            "Écriture de test (Vitest) pour assurer la robustesse de l'application"
-        ],
+        "achievements": "Dans le cadre de ce projet, une refonte complète de l'application a été réalisée en React, en reprenant les fonctionnalités existantes sous jQuery. Redux et Redux Toolkit ont été utilisés pour centraliser la gestion d'état et améliorer la maintenabilité du code. Afin de faciliter l'itération sur les fonctionnalités, l'ouverture de la modale en fin de formulaire a été transformée en plugin et publiée sur NPM, accompagnée d'une documentation technique pour guider l'équipe dans son intégration. Des tests unitaires et d'intégration ont été mis en place pour garantir la robustesse de l'application. Enfin, une analyse comparative des performances entre l'ancienne version en jQuery et la nouvelle en React a été présentée en réunion, permettant d'identifier des optimisations et d'orienter les futures améliorations.",
         "tools": [
             "React et React Router",
-            "Vite",
+            "Vite (déploiement de l'application)",
             "Redux Toolkit et Redux",
             "Testing Library",
-            "Vitest"
+            "Vitest (écriture des tests)"
         ],
         "githublink": "https://github.com/haaslaura/project14-hrnet-react",
         "demolink": "https://github.com/haaslaura/project14-hrnet-react"

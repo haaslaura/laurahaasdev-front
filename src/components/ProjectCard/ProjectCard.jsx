@@ -4,7 +4,7 @@ import { Link } from "react-router"
 
 const ProjectCard = ({ id, title, cover, type }) => {   
 
-    const media = skillFactory(type, cover)
+    const media = skillFactory(type, cover)   
 
     return (
         <Link className="projectcard" to={`/projet/${id}`}>
