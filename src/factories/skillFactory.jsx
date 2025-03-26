@@ -27,6 +27,16 @@ export const skillFactory = (type, source) => {
                 return imgSrc ? <img src={imgSrc} alt="" /> : <span>Image non trouvée</span>;
             }
         };
+
+        case "jpg":
+        return {
+            type,
+            source,
+            render: () => {
+                const imgSrc = images[`../assets/${source}`]?.default;                
+                return imgSrc ? <img src={imgSrc} alt="" /> : <span>Image non trouvée</span>;
+            }
+        };
         
         default:
         throw new Error("Type de média non supporté");
