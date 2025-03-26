@@ -9,11 +9,13 @@ import './header.css'
 
 const Header = () => {
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [isIntermediateSize, setIsIntermediateSize] = useState(window.innerWidth <= 992);
     
     useEffect(() => {
         const handleResize = () => {
           setIsMobile(window.innerWidth <= 768)
+          setIsIntermediateSize(window.innerWidth <= 992)
         }
         window.addEventListener("resize", handleResize);
         
@@ -21,7 +23,7 @@ const Header = () => {
         return () => {
           window.removeEventListener("resize", handleResize)
         }
-      }, [setIsMobile])
+      }, [setIsMobile, setIsIntermediateSize])
 
 
     return (
@@ -52,10 +54,12 @@ const Header = () => {
                                     title="Laura Haas, développeuse"
                                 />
                             </Link>
-                            <div id="home-link__title">
-                                <p>Laura Haas</p>
-                                <p>Développeuse Front-end</p>
-                            </div>
+                            {!isIntermediateSize &&
+                                <div id="home-link__title">
+                                    <p>Laura Haas</p>
+                                    <p>Développeuse Front-end</p>
+                                </div>
+                            }
                         </li>
                         <li role="none"><Link role="menuitem" to="/#portfolio">Portfolio</Link></li>
                         <li role="none"><Link role="menuitem" to="/#contact-section">Contact <i className="fa-regular fa-envelope"></i></Link></li>
