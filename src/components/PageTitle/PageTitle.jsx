@@ -5,7 +5,7 @@ import "./pageTitle.css"
 const PageTitle = ({ text, classColorName }) => {
 
     return (
-        <h1 className={classColorName}>{text}</h1>
+        <h2 className={classColorName}>{text}</h2>
     )
 }
 
