@@ -9,7 +9,7 @@ header {
     height: var(--header-height);
     background-color: #fffffe;
     top: 0px;
-    z-index: 2;
+    z-index: 99;
     border-bottom: 1px #C7C7C7 solid;
     box-shadow: 6px 6px 25px rgba(199,199,199, 0.5);
 }

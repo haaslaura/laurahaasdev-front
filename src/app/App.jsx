@@ -6,8 +6,10 @@ import './app.css'
 import Footer from '../layouts/Footer/Footer'
 import Header from '../layouts/Header/Header'
 
+import Error from '../pages/Error/Error'
 import Home from '../pages/Home/Home'
 import LegalInformation from '../pages/LegalInformation/LegalInformation'
+import Project from '../pages/Project/Project'
 
 
 function App() {
@@ -25,7 +27,8 @@ function App() {
       <Routes>
         {/* {isValidRoute ? () : () } */}
 
-        <Route path='/' element={<Home />}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/projets/:id' element={<Project />} />
         <Route path='/mentions-legales' element={<LegalInformation />}/>
         <Route path='*' element={<Error />} />
 

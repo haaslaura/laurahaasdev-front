@@ -57,7 +57,7 @@ const Header = () => {
                                 <p>Développeuse Front-end</p>
                             </div>
                         </li>
-                        <li role="none"><Link role="menuitem" to="/">Portfolio</Link></li>
+                        <li role="none"><Link role="menuitem" to="/#portfolio">Portfolio</Link></li>
                         <li role="none"><Link role="menuitem" to="/#contact-section">Contact <i className="fa-regular fa-envelope"></i></Link></li>
                     </menu>
                 </nav>

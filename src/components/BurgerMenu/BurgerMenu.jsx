@@ -150,6 +150,11 @@ const Menu = () => {
                             </Link>
                         </li>
                         <li role="none">
+                            <Link role="menuitem" id="portfolio" className="header__menu-item" to="/#portfolio">
+                                <i className="fa-solid fa-briefcase"></i> Portfolio
+                            </Link>
+                        </li>
+                        <li role="none">
                             <Link role="menuitem" id="contact" className="header__menu-item" to="/#contact-section">
                                 <i className="fa-solid fa-comment"></i> Contact
                             </Link>

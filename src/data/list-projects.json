@@ -1,0 +1,34 @@
+[
+    {
+        "id": "hrnet",
+        "title": "HRnet, application pour les RH",
+        "cover": "portfolio-hrnet.jpg",
+        "type": "jpg",
+        "context": "Wealth Health utilise une application web interne, appelée HRnet, qui gère les dossiers des employés. L'application est ancienne et utilise jQuery côté front end. Je suis chargés de convertir l'application en React pour réduire la dette technologique.",
+        "objectives": [
+            "Analyser la performance d'une application web",
+            "Déployer une application front-end",
+            "Refondre une application pour réduire la dette technique",
+            "Mettre en place son environnement Front-End",
+            "Produire de la documentation technique pour une application"
+        ],
+        "achievements": [
+            "Déploiement d'une application front-end",
+            "Utilisation de Redux et Redux Toolkit pour centraliser la gestion d'état",
+            "Utilisation de librairie",
+            "Analyse et comparaison des performances de l'ancienne et nouvelle   application",
+            "Création d'un pluggin de modale déployé sur npm",
+            "Production de documentations techniques",
+            "Écriture de test (Vitest) pour assurer la robustesse de l'application"
+        ],
+        "tools": [
+            "React et React Router",
+            "Vite",
+            "Redux Toolkit et Redux",
+            "Testing Library",
+            "Vitest"
+        ],
+        "githublink": "https://github.com/haaslaura/project14-hrnet-react",
+        "demolink": "https://github.com/haaslaura/project14-hrnet-react"
+    }
+]
