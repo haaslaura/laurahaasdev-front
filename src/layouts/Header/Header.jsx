@@ -30,7 +30,7 @@ const Header = () => {
         <header>
             {isMobile ?
                 <>
-                    <Link to="/#presentation">
+                    <Link to="/">
                         <img
                             role='link'
                             src={logo}
@@ -46,7 +46,7 @@ const Header = () => {
                         <li role="none"><Link role="menuitem" to="/#skills-section">Compétences</Link></li>
                         <li role="none"><Link role="menuitem" to="/#educbg-section">Formations</Link></li>
                         <li role="none" id='home-link'>
-                            <Link role="menuitem" to="/#presentation">
+                            <Link role="menuitem" to="/">
                                 <img
                                     role='link'
                                     src={logo}
@@ -61,7 +61,7 @@ const Header = () => {
                                 </div>
                             }
                         </li>
-                        <li role="none"><Link role="menuitem" to="/#portfolio">Portfolio</Link></li>
+                        <li role="none"><Link role="menuitem" to="/#portfolio-section">Portfolio</Link></li>
                         <li role="none"><Link role="menuitem" to="/#contact-section">Contact <i className="fa-regular fa-envelope"></i></Link></li>
                     </menu>
                 </nav>

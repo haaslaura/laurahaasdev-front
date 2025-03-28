@@ -1,6 +1,12 @@
-#legalinf-section h1{
+#legalinf-section h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
+    font-size: 1.9em;
+}
+
+#legalinf-section h2, #legalinfo-section h3 {
+    text-align: start;
+    margin: 1.9em 0 1em 0;
 }
 
 #legalinf-section div{

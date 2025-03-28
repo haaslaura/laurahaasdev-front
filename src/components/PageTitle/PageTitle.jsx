@@ -1,6 +1,6 @@
 import "./pageTitle.css"
 
-/* Choose between dark-h1 or clear-h1
+/* Choose between dark-h2 or clear-h2
 */
 const PageTitle = ({ text, classColorName }) => {
 

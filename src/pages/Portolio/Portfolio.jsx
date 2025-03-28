@@ -8,7 +8,7 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard"
 const Portfolio = () => {       
 
     return (
-        <section id="portfolio">
+        <section id="portfolio-section">
             <div className="section-content">
             <PageTitle text="Portfolio" classColorName="dark-h1" />
             <p>J'ai plaisir à vous présenter ici quelqu'un de mes projets favoris.</p>

@@ -1,5 +1,4 @@
 import "./legalInformation.css"
-import PageTitle from "../../components/PageTitle/PageTitle"
 import { Link } from "react-router"
 
 const LegalInformation = () => {
@@ -7,7 +6,7 @@ const LegalInformation = () => {
     return (
         <section id="legalinf-section">
             <div className="section-content">
-                <PageTitle text="Informations légales" classColorName="dark-h1" />
+                <h1>Informations légales</h1>
                 <div>
                     <p>Ce site a été réalisé par Laura Haas, tous droits réservés.</p>
                     <p>Responsable de la publication : Laura Haas</p>

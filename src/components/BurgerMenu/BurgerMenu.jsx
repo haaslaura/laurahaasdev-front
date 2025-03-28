@@ -150,7 +150,7 @@ const Menu = () => {
                             </Link>
                         </li>
                         <li role="none">
-                            <Link role="menuitem" id="portfolio" className="header__menu-item" to="/#portfolio">
+                            <Link role="menuitem" id="portfolio" className="header__menu-item" to="/#portfolio-section">
                                 <i className="fa-solid fa-briefcase"></i> Portfolio
                             </Link>
                         </li>
