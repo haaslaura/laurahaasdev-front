@@ -14,3 +14,16 @@
 .contact-form .button-container {
     border: none;
 }
+
+.contact-form .alert {
+    outline-offset: 0.25em;
+    border-radius: 1px;
+}
+
+.contact-form .sending-success {
+    outline: 2px solid green;
+}
+
+.contact-form .sending-error {
+    outline: 2px solid red;
+}

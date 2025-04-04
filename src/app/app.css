@@ -64,6 +64,12 @@ a {
   color: var(--main-color);
 }
 
+a:focus-visible {
+  outline-offset: 0.25em;
+  outline-width: 0.25em;
+  outline-color: currentColor;
+}
+
 a:hover {
   color: #44a6af;
 }
