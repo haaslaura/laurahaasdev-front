@@ -10,18 +10,22 @@ This project is my personal portfolio website, showcasing my skills, experience,
 - **React Router** – Navigation management  
 - **CSS** – Custom styling for responsiveness and accessibility    
 
-## ⚙️ Installation & Setup
+## ⚙️ Front Installation & Setup
 
 To run the project locally:  
 
 1. Clone the repository:  
-`git clone https://github.com/haaslaura/portfolio2025.git`
+`git clone https://github.com/haaslaura/laurahaasdev-front.git`
 
 2. Install dependencies:
 `npm install`
 
 3. Start the development server:
 `npm start`
+
+## Back Installation & Setup
+
+Please visite this link (https://github.com/haaslaura/laurahaasdev-back.git)[https://github.com/haaslaura/laurahaasdev-back.git].
 
 ## 🔨 Features in Progress
 🟩 Responsive navigation menu
