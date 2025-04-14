@@ -25,7 +25,7 @@ To run the project locally:
 
 ## Back Installation & Setup
 
-Please visite this link (https://github.com/haaslaura/laurahaasdev-back.git)[https://github.com/haaslaura/laurahaasdev-back.git].
+Please visite this link [https://github.com/haaslaura/laurahaasdev-back.git](https://github.com/haaslaura/laurahaasdev-back.git).
 
 ## 🔨 Features in Progress
 🟩 Responsive navigation menu
@@ -34,10 +34,7 @@ Please visite this link (https://github.com/haaslaura/laurahaasdev-back.git)[htt
 
 🔲 Portfolio section with project previews
 
-🔲 Contact form integration
-
-## 🌍 Live Demo (Coming Soon)
-A live version will be available once the project reaches a stable state.
+🟩 Contact form integration
 
 ## 📬 Contact
 Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/laurahaas-developpement/) if you have any questions or feedback!

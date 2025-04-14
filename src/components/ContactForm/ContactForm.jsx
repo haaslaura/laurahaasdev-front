@@ -80,7 +80,6 @@ const ContactForm = () => {
 
         // sending data form
         try {
-            // const response = await fetch("http://localhost:5000/send", {
             const response = await fetch("https://api.mailer.laura-haas.dev/send", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

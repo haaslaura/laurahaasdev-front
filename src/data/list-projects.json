@@ -4,21 +4,90 @@
         "title": "HRnet, application pour les RH",
         "cover": "portfolio-hrnet.jpg",
         "type": "jpg",
-        "context": "La société Wealth Health utilise une application web interne, appelée HRnet, pour gèrer les dossiers des employés. L'application est ancienne et utilise jQuery côté front-end. L'application va être convertie en React.",
-        "objectives": [
-            "Refondre une application pour réduire la dette technique,",
-            "Analyser la performance d'une application web,",
-            "Produire de la documentation technique pour une application."
+        "objective": "Conversion d'une application de jQuery vers React pour réduire la dette technologique.",
+        "achievements": [
+            "Déploiement d'une application front-end",
+            "Utilisation de Redux et Redux Toolkit pour centraliser la gestion d'état",
+            "Utilisation de librairie",
+            "Analyse et comparaison des performances de l'ancienne et nouvelle application",
+            "Création d'un plugin de modale déployé sur npm",
+            "Production de documentations techniques",
+            "Écriture de test (Vitest) pour assurer la robustesse de l'application"
         ],
-        "achievements": "Dans le cadre de ce projet, une refonte complète de l'application a été réalisée en React, en reprenant les fonctionnalités existantes sous jQuery. Redux et Redux Toolkit ont été utilisés pour centraliser la gestion d'état et améliorer la maintenabilité du code. Afin de faciliter l'itération sur les fonctionnalités, l'ouverture de la modale en fin de formulaire a été transformée en plugin et publiée sur NPM, accompagnée d'une documentation technique pour guider l'équipe dans son intégration. Des tests unitaires et d'intégration ont été mis en place pour garantir la robustesse de l'application. Enfin, une analyse comparative des performances entre l'ancienne version en jQuery et la nouvelle en React a été présentée en réunion, permettant d'identifier des optimisations et d'orienter les futures améliorations.",
         "tools": [
             "React et React Router",
-            "Vite (déploiement de l'application)",
+            "Vite (déploiement de l'application, build)",
             "Redux Toolkit et Redux",
             "Testing Library",
             "Vitest (écriture des tests)"
         ],
         "githublink": "https://github.com/haaslaura/project14-hrnet-react",
-        "demolink": "https://github.com/haaslaura/project14-hrnet-react"
+        "demolink": ""
+    },
+    {
+        "id": "argentbank",
+        "title": "Argent Bank, compte utilisateur bancaire",
+        "cover": "",
+        "type": "jpg",
+        "objective": "Création d'une application web permettant aux clients de se connecter et de gérer leurs comptes et leur profil.",
+        "achievements": [
+            "Création de la partie front avec Vite, React et React Router, à partir de user case",
+            "Centralisation d'un système de gestion d'état avec Redux Toolkit et Redux",
+            "Gestion des données à partir de MongoDB Atlas et MongoDB Compass",
+            "Utilisation de Swagger pour spécifier les endpoints d'API nécessaires pour une éventuel développement de l'application."
+        ],
+        "tools": [
+            "React et React Router",
+            "Vite (déploiement de l'application, build)",
+            "Redux Toolkit et Redux",
+            "MongoDB Atlas et MongoDB Compass",
+            "Swagger",
+            "API Postman"
+        ],
+        "githublink": "https://github.com/haaslaura/project13-argentbank-front",
+        "demolink": ""
+    },
+    {
+        "id": "sportsee",
+        "title": "SportSee, tableau de bord d'analytics de sport",
+        "cover": "",
+        "type": "jpg",
+        "objective": "Développement d'un tableau de bord d'analytics avec React.",
+        "achievements": [
+            "Implémentation de la page de profil à partir de la maquette",
+            "Utilisation de la librairie Recharts, compréhension de la documentation",
+            "Création d'un service pour switcher entre les données mockées et celles de l'API"
+        ],
+        "tools": [
+            "React",
+            "Create React App (déploiement de l'application, build)",
+            "React Router",
+            "Recharts",
+            "Sass",
+            "Figma"
+        ],
+        "githublink": "https://github.com/haaslaura/sportsee-front",
+        "demolink": ""
+    },
+    {
+        "id": "kasa",
+        "title": "Kasa, application de location de logements",
+        "cover": "",
+        "type": "jpg",
+        "objective": "Réaliser le nouveau site de location d'appartement de Kasa en React côté Front.",
+        "achievements": [
+            "Création de composants avec React",
+            "Respect de la maquette sur Figma",
+            "Développement des routes de l'application avec React Router"
+        ],
+        "tools": [
+            "React",
+            "Create React App (déploiement de l'application, build)",
+            "React Router",
+            "Sass",
+            "Figma"
+        ],
+        "githublink": "https://github.com/haaslaura/kasa-dev",
+        "demolink": ""
     }
 ]

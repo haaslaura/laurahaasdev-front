@@ -1,4 +1,3 @@
-import "./home.css"
 import Presentation from "../Presentation/Presentation"
 import Skills from "../Skills/Skills"
 import EducationalBg from "../EducationalBg/EducationalBg"
