@@ -1,7 +1,7 @@
 #contact-form__info {
     margin: 0;
     color: #fff;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 /* bg color button */
@@ -16,14 +16,14 @@
 }
 
 .contact-form .alert {
-    outline-offset: 0.25em;
+    outline-offset: 0.25rem;
     border-radius: 1px;
 }
 
 .contact-form .sending-success {
-    outline: 2px solid green;
+    outline: 0.13rem solid green;
 }
 
 .contact-form .sending-error {
-    outline: 2px solid red;
+    outline: 0.13rem solid red;
 }

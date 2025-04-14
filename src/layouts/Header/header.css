@@ -8,10 +8,10 @@ header {
     position: sticky;
     height: var(--header-height);
     background-color: #fffffe;
-    top: 0px;
+    top: 0;
     z-index: 99;
     border-bottom: 1px #C7C7C7 solid;
-    box-shadow: 6px 6px 25px rgba(199,199,199, 0.5);
+    box-shadow: 0.37rem 0.37rem 1.6rem rgba(199,199,199, 0.5);
 }
 
 #desktop-nav menu {
@@ -30,8 +30,8 @@ header {
     flex-wrap: nowrap;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 0.1em;
-    margin: 0 10px 0 10px;
+    letter-spacing: 0.1rem;
+    margin: 0 0.6rem 0 0.6rem;
 }
 
 #home-link {
@@ -42,16 +42,16 @@ header {
 }
 
 header img {
-    max-height: 100px;
+    max-height: 6.25rem;
 }
 
 #home-link__title {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 1.2em;
+    margin-right: 1.2rem;
 }
 
 #home-link__title p {
-    margin: 10px 0 0 0;
+    margin: 0.6rem 0 0 0;
 }

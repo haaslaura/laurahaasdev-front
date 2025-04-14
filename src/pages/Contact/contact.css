@@ -4,7 +4,7 @@
 
 .contact-col {
     width: 100%;
-    max-width: 550px;
+    max-width: 35rem;
 }
 #contact-col1 {
     text-align: center;
@@ -12,7 +12,7 @@
 }
 
 #contact-col2 {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .contact-col h2 {
@@ -30,7 +30,7 @@
 @media screen and (min-width: 576px) {
     #contact-section .section-content {
         flex-direction: row;
-        gap: 20px;
+        gap: 1.25rem;
     }
 
     #contact-col1 {
@@ -41,6 +41,6 @@
     }
 
     #contact-col2 {
-        margin-top: 0px;
+        margin-top: 0;
     }
 }

@@ -4,7 +4,7 @@ footer {
     align-items: center;
     background: #fffffe;
     border-top: 1px #C7C7C7 solid;
-    padding: 1em 0 1em 0;
+    padding: 1rem 0 1rem 0;
 }
 
 footer p {
@@ -12,7 +12,7 @@ footer p {
 }
 
 footer a {
-    margin-bottom: 1em;    
+    margin-bottom: 1rem;    
 }
 
 @media screen and (min-width: 768px) {
@@ -20,20 +20,20 @@ footer a {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 1em;
+        gap: 1rem;
         text-align: center;
-        padding: 1em;
+        padding: 1rem;
     }
     footer p {
         text-align: center;
     }
     footer p, footer a {
-        margin: 10px 0 10px 0;
+        margin: 0.6rem 0 0.6rem 0;
     }
 }
 
 @media screen and (min-width: 992px) { 
     footer {
-        gap: 2em;
+        gap: 2rem;
     }
 }

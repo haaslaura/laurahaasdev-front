@@ -22,7 +22,7 @@
   --title-height: 2.6rem;
 
   /* Others */
-  --header-height: 6em;
+  --header-height: 6rem;
 }
 
 
@@ -46,7 +46,7 @@ p, a, span {
 }
 
 ul, ol {
-  line-height: 2em;
+  line-height: 2rem;
 }
 
 p, ul, ol, span {
@@ -65,8 +65,8 @@ a {
 }
 
 a:focus-visible {
-  outline-offset: 0.25em;
-  outline-width: 0.25em;
+  outline-offset: 0.25rem;
+  outline-width: 0.25rem;
   outline-color: currentColor;
 }
 
@@ -75,7 +75,7 @@ a:hover {
 }
 
 p {
-  margin: 0.8em 0;
+  margin: 0.8rem 0;
 }
 
 span {
@@ -107,11 +107,11 @@ section {
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin: 0 1em 5em 1em;
+  margin: 0 1rem 5rem 1rem;
 }
 
 @media screen and (min-width: 992px) {
   .section-content {
-    margin: 0 4em 6em 4em;
+    margin: 0 4rem 6rem 4rem;
   }
 }

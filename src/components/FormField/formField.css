@@ -8,22 +8,22 @@ input,
 textarea {
     width: 96%;
     font-size: 1rem;
-    border-radius: 3px;
+    border-radius: 0.18rem;
     border: none;
-    padding: 8px;
+    padding: 0.5rem;
 }
 
 textarea {
-    height: 150px;
+    height: 9.4rem;
 }
 
 form div[role="group"]{
-    margin-bottom: 0.9em;
+    margin-bottom: 0.9rem;
 }
 
 .error {
     color: var(--main-text-color);
     font-size: 0.8rem;
     font-weight: 500;
-    height: 0px;
+    height: 0;
 }

@@ -3,13 +3,13 @@
 }
 
 #error-section h1 {
-    font-size: 5em;
-    line-height: 1em;
+    font-size: 5rem;
+    line-height: 1rem;
     margin: 0;
 }
 #error-section p {
-    font-size: 1.2em;
-    margin: 2em 0px;
+    font-size: 1.2rem;
+    margin: 2rem 0px;
 }
 
 #error-section h1, #error-section p {

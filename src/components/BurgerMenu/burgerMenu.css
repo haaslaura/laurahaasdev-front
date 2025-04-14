@@ -16,9 +16,9 @@
 .menu-btn__burger-icon span {
   display: block;
   background: #abaeb9;
-  height: 8px;
-  width: 50px;
-  margin-bottom: 9px;
+  height: 0.5rem;
+  width: 3.12rem;
+  margin-bottom: 0.56rem;
   transition-duration: 400ms;
 }
 
@@ -57,7 +57,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  gap: 5em;
+  gap: 5rem;
   justify-content: flex-start;
   
   position: fixed;
@@ -68,10 +68,10 @@
   width: 12.5rem;
   
   background: #373a47;
-  padding: 4em 2em 0 2em;
+  padding: 4rem 2rem 0 2rem;
   margin: 0;
   list-style: none;
-  box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: -0.06rem 0 0.5rem rgba(0, 0, 0, 0.4);
 
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
@@ -102,15 +102,15 @@
 .header__menu-btn-close {
   position: absolute;
   z-index: 99;
-  right: 16px;
-  top: 16px;
+  right: 1rem;
+  top: 1rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   opacity: 0.5;
   cursor: pointer;
   border: none;
@@ -132,10 +132,10 @@
 .header__menu-btn-close:before,
 .header__menu-btn-close:after {
   position: absolute;
-  left: 16px;
+  left: 1rem;
   content: " ";
-  height: 24px;
-  width: 3px;
+  height: 1.5rem;
+  width: 0.18rem;
   background-color: #fff;
 }
 

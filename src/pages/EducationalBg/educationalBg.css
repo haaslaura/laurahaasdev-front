@@ -10,8 +10,8 @@
 
 #educbg-section__txt-bg {
     background-color: #ffffffd3;
-    border-radius: 5px;
-    padding: 1.2em;
+    border-radius: 0.31rem;
+    padding: 1.2rem;
     text-wrap: balance;
 }
 
@@ -26,7 +26,7 @@
 
 @media screen and (min-width: 576px) {
     #educbg-section__txt-bg {
-        padding: 1.6em 10%;
+        padding: 1.6rem 10%;
     }
 }
 
@@ -38,7 +38,7 @@
     #educbg-section__txt-bg {
         display: flex;
         flex-direction: row;
-        gap: 20px;
-        padding: 1.3em 5%;
+        gap: 1.25rem;
+        padding: 1.3rem 5%;
     }
 }

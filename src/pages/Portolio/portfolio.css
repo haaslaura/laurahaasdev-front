@@ -1,8 +1,8 @@
 #portfolio__list {
     display:grid;
     grid-template-columns: 1fr;
-    gap: 30px;
-    margin-top: 20px;
+    gap: 1.87rem;
+    margin-top: 1.25rem;
 }
 
 #portfolio p {
@@ -12,8 +12,8 @@
 @media screen and (min-width: 576px) {
     #portfolio__list {
         grid-template-columns: 1fr 1fr;
-        column-gap: 30px;
-        row-gap: 40px;
+        column-gap: 1.87rem;
+        row-gap: 2.5rem;
     }
 }
 
