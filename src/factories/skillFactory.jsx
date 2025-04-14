@@ -28,6 +28,7 @@ export const skillFactory = (type, source) => {
             }
         };
 
+        case "webp" :
         case "jpg":
         return {
             type,

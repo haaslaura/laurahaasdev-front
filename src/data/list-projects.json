@@ -2,8 +2,8 @@
     {
         "id": "hrnet",
         "title": "HRnet, application pour les RH",
-        "cover": "portfolio-hrnet.jpg",
-        "type": "jpg",
+        "cover": "portfolio-hrnet.webp",
+        "type": "webp",
         "objective": "Conversion d'une application de jQuery vers React pour réduire la dette technologique.",
         "achievements": [
             "Déploiement d'une application front-end",
@@ -27,8 +27,8 @@
     {
         "id": "argentbank",
         "title": "Argent Bank, compte utilisateur bancaire",
-        "cover": "",
-        "type": "jpg",
+        "cover": "portfolio-argentbank.webp",
+        "type": "webp",
         "objective": "Création d'une application web permettant aux clients de se connecter et de gérer leurs comptes et leur profil.",
         "achievements": [
             "Création de la partie front avec Vite, React et React Router, à partir de user case",
@@ -50,8 +50,8 @@
     {
         "id": "sportsee",
         "title": "SportSee, tableau de bord d'analytics de sport",
-        "cover": "",
-        "type": "jpg",
+        "cover": "portfolio-sportsee.webp",
+        "type": "webp",
         "objective": "Développement d'un tableau de bord d'analytics avec React.",
         "achievements": [
             "Implémentation de la page de profil à partir de la maquette",
@@ -72,8 +72,8 @@
     {
         "id": "kasa",
         "title": "Kasa, application de location de logements",
-        "cover": "",
-        "type": "jpg",
+        "cover": "portfolio-kasa.webp",
+        "type": "webp",
         "objective": "Réaliser le nouveau site de location d'appartement de Kasa en React côté Front.",
         "achievements": [
             "Création de composants avec React",
